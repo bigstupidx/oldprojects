@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="collection">
+      <UniqueIdentifier>{2cce6eae-ae45-4a31-8148-ae16c1570be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{4396edee-c66c-4d85-b288-9089c03da8ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{229ad117-557e-4a21-ba1a-3cc1aa2cefec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream">
+      <UniqueIdentifier>{2e88fb47-84cb-4c1a-8209-0109ab5e9148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imagelib">
+      <UniqueIdentifier>{7e7e61ae-abc3-44ce-b869-68fd5fcca082}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\core\collection\parray.h">
+      <Filter>collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\collection\pstring.h">
+      <Filter>collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\math\pmatrix4x4.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\utility\pcolorrgba.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\stream\pabstractstream.h">
+      <Filter>stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\stream\pinputstream.h">
+      <Filter>stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\stream\poutputstream.h">
+      <Filter>stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\stream\pstreamobject_private.h">
+      <Filter>stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\imagelib\pimage.h">
+      <Filter>imagelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\imagelib\pimagepng_private.h">
+      <Filter>imagelib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\math\pmathutility.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\math\pvector3.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\collection\plist.h">
+      <Filter>collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\collection\pmap.h">
+      <Filter>collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\collection\prbtree.h">
+      <Filter>collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\collection\pset.h">
+      <Filter>collection</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\core\collection\pstring.cpp">
+      <Filter>collection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\math\pmatrix4x4.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\utility\pcolorrgba.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\stream\pabstractstream.cpp">
+      <Filter>stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\stream\pinputstream.cpp">
+      <Filter>stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\stream\poutputstream.cpp">
+      <Filter>stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\stream\pstreamfile.cpp">
+      <Filter>stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\stream\pstreammemory.cpp">
+      <Filter>stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\imagelib\pimage.cpp">
+      <Filter>imagelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\imagelib\pimagepng.cpp">
+      <Filter>imagelib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\math\pmathutility.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\math\pvector3.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\collection\parray.cpp">
+      <Filter>collection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\collection\plist.cpp">
+      <Filter>collection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\collection\pmap.cpp">
+      <Filter>collection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\collection\prbtree.cpp">
+      <Filter>collection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\collection\pset.cpp">
+      <Filter>collection</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

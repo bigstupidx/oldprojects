@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name">Crystal Swan</string> 
+    <string name="author">Kivvi</string> 
+    <string name="title">Crystal Swan</string>
+    <string name="description">Very beautiful crystal swan.</string> 
+    
+    <string name="background_brightness">Background brightness</string>
+    <string name="check_doubleclick">Double click</string>
+    <string name="check_doubleclick_summary">Enable double click to change wallpaper theme</string>
+    <string name="setswan">Purple Swan</string>
+    <string name="setswan_summary">set the \'Purple Swan\' theme</string>
+    <string name="sethorse">Ice horse</string>
+    <string name="sethorse_summary">set the \'Ice horse\' theme</string>
+    <string name="setrabbit">Snow rabbit</string>
+    <string name="setrabbit_summary">set the \'Snow Rabbit\' theme</string>
+    
+    <string name="button1_text">Setting</string>
+    <string name="button2_text">Next</string>
+    <string name="thanks_message">Thank you for installing Crystal Style.</string>
+    <string name="next_message">Tap \'Next\' and select \'Crystal Style\' from the following screen to set this wallpaper.</string>
+    <string name="setting_message">Tap \'Setting\' to customize your wallpaper.</string>
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+    
+    <string name="customization">CUSTOMIZATION</string>
+    <string name="social">SOCIAL</string>
+    <string name="information">INFORMATION</string>
+    <string name="rate">Rate This App</string>
+    <string name="rate_message">Rate this app and tell us how we are doing</string>
+    <string name="share">Share</string>
+    <string name="share_message">Pride share this app with friends</string>
+    <string name="share_message_long">Hey! Download this great live wallpaper!</string>
+    <string name="designer">Designer</string>
+    <string name="designer_message">Kivvi Studio</string>
+    <string name="about">About Kivvi Studio</string>
+    <string name="about_message">Our team focus on live wallpaper. Contact us: kivvi.service@gmail.com</string>
+</resources>

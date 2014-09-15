@@ -1,0 +1,72 @@
+<resources>
+
+    <string name="app_name">Ripples</string> 
+    <string name="author">Kivvi</string> 
+    <string name="title">Ripples</string>
+    <string name="description">Fingers of small efforts, agitate the ripples.</string> 
+    <string name="preferences">Preferences</string>
+    <string name="preferences_customWallpaper">Custom Background</string>
+    <string name="preferences_sysWallpaper">System Background</string>
+    <string name="preferences_defWallpaper">Default Background</string>
+    <string name="preferences_customWallpaper_summary">Use your photo as background</string>
+    <string name="preferences_sysWallpaper_summary">Use default wallpaper of the phone as background</string>
+    <string name="preferences_defWallpaper_summary">Use default background</string>
+    <string name="preferences_frequency">Random Frequency</string>
+
+    <string-array name="preferences_frequency">
+        <item>@string/close</item>
+        <item>@string/fase</item>
+        <item>@string/normal</item>
+        <item>@string/slow</item>
+    </string-array>
+    <string-array name="preferences_frequency_list_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="preferences_range">Range</string>
+
+    <string-array name="preferences_range">
+        <item>@string/big</item>
+        <item>@string/normal</item>
+        <item>@string/small</item>
+    </string-array>
+    <string-array name="preferences_range_list_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="fase">Fase</string>
+    <string name="slow">Slow</string>
+    <string name="close">Close</string>
+    <string name="normal">Normal</string>
+    <string name="big">Big</string>
+    <string name="small">Small</string>
+    <string name="failed">Failed to obtain pictures</string>
+    <string name="scrollbackgroundtitle">Scroll Background</string>
+    <string name="scrollbackgroundsummarye">Background screen scrolls to follow the Lord</string>
+    <string name="currSettings">Current settings:</string>
+    
+    <string name="button1_text">Setting</string>
+    <string name="button2_text">Next</string>
+    <string name="thanks_message">Thank you for installing Ripples.</string>
+    <string name="next_message">Tap \'Next\' and select \'Ripples\' from the following screen to set this wallpaper.</string>
+    <string name="setting_message">Tap \'Setting\' to customize your wallpaper.</string>
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+    
+    <string name="customization">CUSTOMIZATION</string>
+    <string name="social">SOCIAL</string>
+    <string name="information">INFORMATION</string>
+    <string name="rate">Rate This App</string>
+    <string name="rate_message">Rate this app and tell us how we are doing</string>
+    <string name="share">Share</string>
+    <string name="share_message">Pride share this app with friends</string>
+    <string name="share_message_long">Hey! Download this great live wallpaper!</string>
+    <string name="designer">Designer</string>
+    <string name="designer_message">Kivvi Studio</string>
+    <string name="about">About Kivvi Studio</string>
+    <string name="about_message">Our team focus on live wallpaper.</string>
+</resources>

@@ -1,0 +1,5 @@
+#include "pkernel.h"
+#include "pbase.h"
+#include "prenderer.h"
+#include "presource.h"
+#include "pscenegraph.h"

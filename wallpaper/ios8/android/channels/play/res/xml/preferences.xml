@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_name" >
+
+    <PreferenceCategory android:title="@string/customization" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="wave"
+            android:summary="@string/wave_summary"
+            android:title="@string/wave" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="twinkle"
+            android:summary="@string/twinkle_summary"
+            android:title="@string/twinkle" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="gsensor"
+            android:summary="@string/gsensor_summary"
+            android:title="@string/gsensor" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/social" >
+        <PreferenceScreen
+            android:key="rate"
+            android:summary="@string/rate_message"
+            android:title="@string/rate" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="share"
+            android:summary="@string/share_message"
+            android:title="@string/share" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/information" >
+        <com.kivvi.wallpaper.SimpleDialogPreference
+            android:dialogMessage="@string/designer_message"
+            android:dialogTitle="@string/designer"
+            android:key="designer"
+            android:title="@string/designer" />
+        <com.kivvi.wallpaper.SimpleDialogPreference
+            android:dialogMessage="@string/about_message"
+            android:dialogTitle="@string/about"
+            android:key="about"
+            android:title="@string/about" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

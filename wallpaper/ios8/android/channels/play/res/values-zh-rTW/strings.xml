@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">iOS 8動態壁紙</string>
+    <string name="author">Kivvi工作室</string>
+    <string name="title">iOS 8動態壁紙</string>
+    <string name="description">iOS 8動態壁紙。</string>
+    
+    <string name="button1_text">設置</string>
+    <string name="button2_text">下一步</string>
+    <string name="thanks_message">谢谢你安装iOS動態壁紙。請盡情享受它!</string>
+    <string name="next_message">按\"下一步\"来设置壁纸.</string>
+    <string name="setting_message">按\"设置\"来自定义壁纸.</string>
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+        
+    <string name="wave">海浪</string>
+    <string name="wave_summary">開啟海浪並反轉</string>
+    <string name="twinkle">閃爍</string>
+    <string name="twinkle_summary">開啟光斑閃爍</string>
+    <string name="gsensor">重力感應</string>
+    <string name="gsensor_summary">開啟重力感應</string>
+    
+	<string name="customization">自定义</string>
+    <string name="social">社交</string>
+    <string name="information">信息</string>
+    <string name="rate">为壁纸评分</string>
+    <string name="rate_message">给这个壁纸评分</string>
+    <string name="share">分享</string>
+    <string name="share_message">和朋友们分享这个壁纸</string>
+    <string name="share_message_long">推荐你一个很赞的动态壁纸。在这里下载： </string>
+    <string name="designer">设计者</string>
+    <string name="designer_message">Kivvi工作室</string>
+    <string name="about">关于Kivvi工作室</string>
+    <string name="about_message">Kivvi工作室是一个专注于安卓动态壁纸的团队。聯繫我們：kivvi.service@gmail.com</string>
+    
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ripples>
+    <!-- 随机水波选项（四个选项：close,fase,normal,slow ） -->
+    <frequencyswitch>close</frequencyswitch>
+    <!-- 水波大小选项（ 三个选项：big, normal, small ） -->
+    <rangeswitch>normal</rangeswitch>
+    <!-- 背景是否随屏幕滑动而滑动（ 二个选项：true, false ） -->
+    <scrollbackgroundswitch>true</scrollbackgroundswitch>
+    <!-- 默认背景（ 三个选项：0:默认壁纸, 1:系统当前壁纸 ） -->
+    <backgroundoption>0</backgroundoption>
+    <!-- 自定义壁纸路径（ 当前支持jpg和png格式 ） -->
+    <custombackgroundpath>/system/ripples/bg.jpg</custombackgroundpath>
+    <!-- 是否支持水波反光（ 二个选项：true, false ） -->
+    <reflectlight>true</reflectlight>
+</ripples>

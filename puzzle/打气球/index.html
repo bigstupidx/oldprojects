@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>射击小游戏</title>
+		
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"  id="viewport" />
+		<script>
+		var isIphone = navigator.userAgent.match(/i(Phone|Pod)/i),
+			isAndroid = navigator.userAgent.match(/Android/i);
+		
+		isIphone && document.getElementById("viewport").setAttribute("content", "height=device-width, initial-scale=" + 1 / window.devicePixelRatio + ", user-scalable=no, maximum-scale=1.0");
+		isAndroid && document.getElementById("viewport").setAttribute("content", "width=device-width, initial-scale=" + 1 / 1.5 + ",target-densitydpi=device-dpi, user-scalable=no, maximum-scale=" + 1 / 1.5);
+		</script>
+		
+		<link href="css/global.css" rel="stylesheet" type="text/css">
+		
+		<link href="css/game.css" rel="stylesheet" type="text/css">
+		
+		<style id="css"></style>
+	</head>
+	<body>
+		<section id="loading">
+			<div class="cloud">
+			</div>
+			<div class="load_head">
+				<img id="loading_img" src="image/load_head.png" alt="loading">
+				<div id="loading_bar">
+					<div id="loading_progress"></div>
+				</div>
+				<img id="loading_txt" src="image/load_txt.png" alt="loading">
+			</div>
+		</section>
+		<section id="instruction">
+			<div class="cloud"></div>
+			<div class="wall">
+			</div>
+			<div id="intro_div">
+				<div id="intro">
+					<p><strong>游戏介绍：</strong></p>
+					<p>游戏共10关，每关25条题；依次闯关，每一关正确率达<span>100%</span>后，则解锁下一关。解锁后的关卡可以重复游戏，来获取更高的分数。</p>
+					<p>游戏开始后，画面底部出现题目，<span>4</span>个绑有答案的气球从底部缓缓升起。射中正确的气球则给予得分；<span>选错、误射、或在规定时间内未射中，则不得分。</span></p>
+					<p><strong>得分规则：</strong></p>
+					<p>正确击中气球则得100分，同时根据每关剩余时间获得游戏加分。</p>	
+					<p><i>例如</i>：剩余10秒时打中正确答案，则得分为100 + 10 x 10，即200分</p>					
+					<p><i>例如</i>：连续答对2题后，游戏界面中出现COMBO+1字样；随着连续答对题目数量增加，COMBO数字不断增加；第六题答错或者时间耗尽，可获得额外奖励5（COMBO数字）x 50=250分</p>
+					<p><strong>排名规则：</strong></p>
+					<p><b>每一关有个人历史最高得分</b>，10关最高得分累计相加为“<i><b><span>累计得分</span></b></i>”（未解锁的以0分计算），排名依据“<i><b><span>10关累计得分</span></b></i>”计算。</p>
+					<p>您的得分将被系统记录参与排名。同时您的成绩也将影响到您团队的成绩：</p>
+					<p>团队排名说明：以参与游戏的团队成员得分的加权平均分作为最终得分。</p>
+					<p>团队中参与的人数越多，得分越高，则整个团队的得分越高</p>
+					<p><strong><i>计算公式：</i></strong></p>
+					<blockquote>参与游戏用户平均分值  x  参与游戏的人数 / 团队总人数</blockquote>
+					<p><i>例如：</i>团队A，有50人，其中25人玩了游戏，平均每人得分95分；</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;团队B，有15人，其中5人玩了游戏，平均每人得分98分。</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;团队A:  95 x 25/50 =47.5 分　　团队B： 98 x 5/15=32.6分</p>
+				</div>
+				<img id="btn_start" src="image/instro_btn.png" alt="开始游戏" />
+			</div>
+		</section>
+		<section id="level">
+			<div class="cloud"></div>
+			<div id="map_bg">
+				<div id="map_area">
+					<div id="map_score">
+						<p id="level_score">10000</p>
+					</div>
+					<div id="map_choose">
+					</div>
+				</div>
+			</div>
+			<div id="level_action">
+				<img id="level_rank_btn" src="image/level_rank_btn.png" alt="查看英雄榜" />
+				<img id="level_start_btn" src="image/level_start_btn.png" alt="开始游戏" />
+			</div>
+		</section>
+		<section id="game">
+			<canvas id="gameCanvas"></canvas>
+			<canvas id="canvasBuf"></canvas>
+<!-- 			<div class="wall"> -->
+<!-- 				<img src="image/wall_t.png"> -->
+<!-- 			</div> -->
+<!-- 			<canvas id="qCanvas"></canvas> -->
+			<img class="pause" src="image/pause.png"/>
+<!-- 			<div class="question"> -->
+<!-- 			</div> -->
+			<div class="notice_mask" id="notice_mask">
+				<div class="notice">
+					<img src="image/close.png">
+				</div>
+			</div>
+		</section>
+		<section id="pause">
+			<div class="cloud"></div>
+			<div class="pause_menu">
+				<img class="menu_item menu1" id="pause_reusme" src="image/pause_resume.png"/>
+				<img class="menu_item menu2" id="pause_rechoose" src="image/pause_rechoose.png"/>
+			</div>
+		</section>
+		<section id="rank">
+			<div class="cloud"></div>
+			<div class="wall">
+			</div>
+			<div id="rank_div">	
+				<div id="rank_all_list">
+					<div class="rank_list current" id="unlist">
+					</div>
+					<div class="rank_list" id="uzlist">
+					</div>
+					<div class="rank_list" id="gnlist">
+					</div>
+					<div class="rank_list" id="gzlist">
+					</div>
+					<div class="rank_list" id="uglist">
+					</div>
+				</div>
+				<div class="rank_btns">
+					<nav class="tab">
+						<img id="btn_unlist" src="image/rank_unlist.png" alt="个人全国排名" />
+						<img id="btn_uzlist" src="image/rank_uzlist.png" alt="个人区域排名" />
+						<img id="btn_gnlist" src="image/rank_gnlist.png" alt="经销商全国排名" />
+						<img id="btn_gzlist" src="image/rank_gzlist.png" alt="经销商区域排名" />
+						<img id="btn_uglist" src="image/rank_uglist.png" alt="店内排名" />
+					</nav>
+					<img id="rank_btn_ok" src="image/rank_btn.png" alt="确定" />
+				</div>
+			</div>
+		</section>
+		<section id="score">
+			<div class="cloud"></div>
+			<div class="wall">
+			</div>
+			<div id="score_div">
+				<div id="score_histroy">500</div>
+				<div id="score_level">1000</div>
+				<div id="score_btn">
+					<img id="score_btn_ok" src="image/score_btn_ok.png" alt="确定" />
+				</div>
+			</div>
+		</section>
+		<section class="no_play" id="no_play">
+			<div></div>
+		</section>
+		<audio src="sounds/bgm.mp3" id="sound_bgm" preload="auto" loop></audio>
+		<audio src="sounds/hammer.mp3" id="sound_shoot" preload="auto"></audio>
+		
+		<script type="text/javascript" src="js/lib/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.jscrollpane.js"></script>
+		<script type="text/javascript" src="js/lib/main.js"></script>
+		<script type="text/javascript" src="js/lib/util.js"></script>
+		
+		<script type="text/javascript" src="js/gameLoader.js"></script>
+		
+		<script type="text/javascript" src="js/common/const.js"></script>	
+		<script type="text/javascript" src="js/common/config.js"></script>
+		<script type="text/javascript" src="js/common/tool.js"></script>
+		<script type="text/javascript" src="js/common/action.js"></script>
+		<script type="text/javascript" src="js/common/res.js"></script>
+		<script type="text/javascript" src="js/common/question.js"></script>
+		
+		<script type="text/javascript" src="js/drawable/drawable.js"></script>
+		<script type="text/javascript" src="js/drawable/box.js"></script>
+		<script type="text/javascript" src="js/drawable/circle.js"></script>
+		<script type="text/javascript" src="js/drawable/sprite.js"></script>
+		<script type="text/javascript" src="js/drawable/game/game.js"></script>
+		<script type="text/javascript" src="js/drawable/game/shooter.js"></script>
+		<script type="text/javascript" src="js/drawable/game/balloon.js"></script>
+		<script type="text/javascript" src="js/drawable/game/bullet.js"></script>
+		
+		<script type="text/javascript" src="js/gameMain.js"></script>
+	</body>
+</html>

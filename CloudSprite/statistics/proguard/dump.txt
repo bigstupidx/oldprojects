@@ -1,0 +1,886 @@
+_____________________________________________________________________
+- Program class: com/cloudsprite/statistics/a
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.cloudsprite.statistics.a extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 69):
+  - String []
+  - String [&device=]
+  - String [&factory=]
+  - String [&imsi=]
+  - String [?imei=]
+  - String [UTF-8]
+  - String [a01]
+  - String [mtk012]
+  - String [phone]
+  - Class [android/content/Context]
+  - Class [android/telephony/TelephonyManager]
+  - Class [com/cloudsprite/statistics/a]
+  - Class [java/lang/Exception]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [java/net/URLEncoder]
+  - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [android/telephony/TelephonyManager.getDeviceId ()Ljava/lang/String;]
+  - Methodref [android/telephony/TelephonyManager.getSubscriberId ()Ljava/lang/String;]
+  - Methodref [java/lang/Exception.printStackTrace ()V]
+  - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - NameAndType [encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [getDeviceId ()Ljava/lang/String;]
+  - NameAndType [getSubscriberId ()Ljava/lang/String;]
+  - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - NameAndType [printStackTrace ()V]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - Utf8 []
+  - Utf8 [&device=]
+  - Utf8 [&factory=]
+  - Utf8 [&imsi=]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [(Landroid/content/Context;)Ljava/lang/String;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+  - Utf8 [<init>]
+  - Utf8 [?imei=]
+  - Utf8 [Code]
+  - Utf8 [StackMapTable]
+  - Utf8 [UTF-8]
+  - Utf8 [a]
+  - Utf8 [a01]
+  - Utf8 [android/content/Context]
+  - Utf8 [android/telephony/TelephonyManager]
+  - Utf8 [append]
+  - Utf8 [com/cloudsprite/statistics/a]
+  - Utf8 [encode]
+  - Utf8 [getDeviceId]
+  - Utf8 [getSubscriberId]
+  - Utf8 [getSystemService]
+  - Utf8 [java/lang/Exception]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [java/net/URLEncoder]
+  - Utf8 [mtk012]
+  - Utf8 [phone]
+  - Utf8 [printStackTrace]
+  - Utf8 [toString]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  - Method:       a(Landroid/content/Context;)Ljava/lang/String;
+    Access flags: 0x9
+      = public static java.lang.String a(android.content.Context)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 134, locals = 4, stack = 3):
+      [0] aconst_null
+      [1] astore_1 v1
+      [2] new #16
+        - Class [java/lang/StringBuilder]
+      [5] dup
+      [6] ldc #5
+        - String [?imei=]
+      [8] invokespecial #22
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [11] aload_0 v0
+      [12] iconst_0
+      [13] istore_2 v2
+      [14] astore_2 v2
+      [15] aconst_null
+      [16] astore_3 v3
+      [17] aload_2 v2
+      [18] ldc #9
+        - String [phone]
+      [20] invokevirtual #18
+        - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [23] checkcast #11
+        - Class [android/telephony/TelephonyManager]
+      [26] dup
+      [27] astore_2 v2
+      [28] invokevirtual #19
+        - Methodref [android/telephony/TelephonyManager.getDeviceId ()Ljava/lang/String;]
+      [31] dup
+      [32] astore_3 v3
+      [33] ifnonnull +6 (target=39)
+      [36] ldc #1
+        - String []
+      [38] astore_3 v3
+      [39] aload_3 v3
+      [40] ldc #6
+        - String [UTF-8]
+      [42] invokestatic #25
+        - Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [45] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [48] ldc #4
+        - String [&imsi=]
+      [50] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [53] aload_0 v0
+      [54] iconst_0
+      [55] istore_2 v2
+      [56] astore_2 v2
+      [57] aconst_null
+      [58] astore_3 v3
+      [59] aload_2 v2
+      [60] ldc #9
+        - String [phone]
+      [62] invokevirtual #18
+        - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [65] checkcast #11
+        - Class [android/telephony/TelephonyManager]
+      [68] dup
+      [69] astore_2 v2
+      [70] invokevirtual #20
+        - Methodref [android/telephony/TelephonyManager.getSubscriberId ()Ljava/lang/String;]
+      [73] dup
+      [74] astore_3 v3
+      [75] ifnonnull +6 (target=81)
+      [78] ldc #1
+        - String []
+      [80] astore_3 v3
+      [81] aload_3 v3
+      [82] ldc #6
+        - String [UTF-8]
+      [84] invokestatic #25
+        - Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [87] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [90] ldc #3
+        - String [&factory=]
+      [92] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [95] ldc #7
+        - String [a01]
+      [97] ldc #6
+        - String [UTF-8]
+      [99] invokestatic #25
+        - Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [102] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [105] ldc #2
+        - String [&device=]
+      [107] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [110] ldc #8
+        - String [mtk012]
+      [112] ldc #6
+        - String [UTF-8]
+      [114] invokestatic #25
+        - Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [117] invokevirtual #23
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [120] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [123] astore_1 v1
+      [124] goto +8 (target=132)
+      [127] dup
+      [128] astore_0 v0
+      [129] invokevirtual #21
+        - Methodref [java/lang/Exception.printStackTrace ()V]
+      [132] aload_1 v1
+      [133] areturn
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (2 -> 124: 127):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 4):
+        - [39] Var: [a:android/content/Context][n][T][a:java/lang/String], Stack: [a:java/lang/StringBuilder]
+        - [81] Var: [T][n][T][a:java/lang/String], Stack: [a:java/lang/StringBuilder]
+        - [127] Var: [T][a:java/lang/String], Stack: [a:java/lang/Exception]
+        - [132] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/cloudsprite/statistics/MainActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.cloudsprite.statistics.MainActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 20):
+  - Class [android/app/Activity]
+  - Class [com/cloudsprite/statistics/MainActivity]
+  - Class [com/cloudsprite/statistics/MainService]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [com/cloudsprite/statistics/MainService.a (Landroid/content/Context;)V]
+  - NameAndType [<init> ()V]
+  - NameAndType [a (Landroid/content/Context;)V]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - Utf8 [()V]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [a]
+  - Utf8 [android/app/Activity]
+  - Utf8 [com/cloudsprite/statistics/MainActivity]
+  - Utf8 [com/cloudsprite/statistics/MainService]
+  - Utf8 [onCreate]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #5
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] invokestatic #6
+        - Methodref [com/cloudsprite/statistics/MainService.a (Landroid/content/Context;)V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/cloudsprite/statistics/MainReceiver
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.cloudsprite.statistics.MainReceiver extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 18):
+  - Class [android/content/BroadcastReceiver]
+  - Class [com/cloudsprite/statistics/MainReceiver]
+  - Class [com/cloudsprite/statistics/MainService]
+  - Methodref [android/content/BroadcastReceiver.<init> ()V]
+  - Methodref [com/cloudsprite/statistics/MainService.a (Landroid/content/Context;)V]
+  - NameAndType [<init> ()V]
+  - NameAndType [a (Landroid/content/Context;)V]
+  - Utf8 [()V]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [a]
+  - Utf8 [android/content/BroadcastReceiver]
+  - Utf8 [com/cloudsprite/statistics/MainReceiver]
+  - Utf8 [com/cloudsprite/statistics/MainService]
+  - Utf8 [onReceive]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainReceiver()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        - Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x1
+      = public void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 3, stack = 1):
+      [0] aload_1 v1
+      [1] invokestatic #5
+        - Methodref [com/cloudsprite/statistics/MainService.a (Landroid/content/Context;)V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/cloudsprite/statistics/MainService
+  Superclass:    android/app/Service
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.cloudsprite.statistics.MainService extends android.app.Service
+
+Interfaces (count = 0):
+
+Constant Pool (count = 92):
+  - String [bUploaded = ]
+  - String [statistics]
+  - String [uploaded]
+  - String [write preference ret ]
+  - Class [android/app/Service]
+  - Class [android/content/Context]
+  - Class [android/content/Intent]
+  - Class [android/content/SharedPreferences]
+  - Class [android/content/SharedPreferences$Editor]
+  - Class [android/util/Log]
+  - Class [com/cloudsprite/statistics/MainService]
+  - Class [com/cloudsprite/statistics/b]
+  - Class [java/lang/StringBuilder]
+  - Methodref [android/app/Service.<init> ()V]
+  - Methodref [android/app/Service.onCreate ()V]
+  - Methodref [android/app/Service.onStartCommand (Landroid/content/Intent;II)I]
+  - Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [com/cloudsprite/statistics/MainService.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - Methodref [com/cloudsprite/statistics/b.<init> (Lcom/cloudsprite/statistics/MainService;)V]
+  - Methodref [com/cloudsprite/statistics/b.start ()V]
+  - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+  - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+  - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+  - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - NameAndType [<init> (Lcom/cloudsprite/statistics/MainService;)V]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [append (Z)Ljava/lang/StringBuilder;]
+  - NameAndType [commit ()Z]
+  - NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [getBoolean (Ljava/lang/String;Z)Z]
+  - NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - NameAndType [onCreate ()V]
+  - NameAndType [onStartCommand (Landroid/content/Intent;II)I]
+  - NameAndType [putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - NameAndType [start ()V]
+  - NameAndType [startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - NameAndType [v (Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [()Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  - Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Utf8 [(Landroid/content/Intent;)Landroid/os/IBinder;]
+  - Utf8 [(Landroid/content/Intent;II)I]
+  - Utf8 [(Lcom/cloudsprite/statistics/MainService;)V]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+  - Utf8 [(Ljava/lang/String;Z)Z]
+  - Utf8 [(Z)Ljava/lang/StringBuilder;]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [StackMapTable]
+  - Utf8 [a]
+  - Utf8 [android/app/Service]
+  - Utf8 [android/content/Context]
+  - Utf8 [android/content/Intent]
+  - Utf8 [android/content/SharedPreferences]
+  - Utf8 [android/content/SharedPreferences$Editor]
+  - Utf8 [android/util/Log]
+  - Utf8 [append]
+  - Utf8 [bUploaded = ]
+  - Utf8 [com/cloudsprite/statistics/MainService]
+  - Utf8 [com/cloudsprite/statistics/b]
+  - Utf8 [commit]
+  - Utf8 [edit]
+  - Utf8 [getBoolean]
+  - Utf8 [getSharedPreferences]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [onBind]
+  - Utf8 [onCreate]
+  - Utf8 [onStartCommand]
+  - Utf8 [putBoolean]
+  - Utf8 [start]
+  - Utf8 [startService]
+  - Utf8 [statistics]
+  - Utf8 [toString]
+  - Utf8 [uploaded]
+  - Utf8 [v]
+  - Utf8 [write preference ret ]
+
+Fields (count = 0):
+
+Methods (count = 6):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainService()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #14
+        - Methodref [android/app/Service.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    Access flags: 0x1
+      = public android.os.IBinder onBind(android.content.Intent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 2, locals = 2, stack = 1):
+      [0] aconst_null
+      [1] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate()V
+    Access flags: 0x1
+      = public void onCreate()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #15
+        - Methodref [android/app/Service.onCreate ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onStartCommand(Landroid/content/Intent;II)I
+    Access flags: 0x1
+      = public int onStartCommand(android.content.Intent,int,int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 75, locals = 6, stack = 4):
+      [0] aload_0 v0
+      [1] ldc #2
+        - String [statistics]
+      [3] iconst_0
+      [4] invokevirtual #20
+        - Methodref [com/cloudsprite/statistics/MainService.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [7] dup
+      [8] astore v4
+      [10] ldc #3
+        - String [uploaded]
+      [12] iconst_0
+      [13] invokeinterface #27
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [18] istore v4
+      [20] new #13
+        - Class [java/lang/StringBuilder]
+      [23] dup
+      [24] ldc #1
+        - String [bUploaded = ]
+      [26] invokespecial #23
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [29] iload v4
+      [31] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;]
+      [34] invokevirtual #25
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [37] astore v5
+      [39] ldc #2
+        - String [statistics]
+      [41] aload v5
+      [43] invokestatic #19
+        - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+      [46] pop
+      [47] iload v4
+      [49] ifne +18 (target=67)
+      [52] aload_0 v0
+      [53] astore v4
+      [55] new #12
+        - Class [com/cloudsprite/statistics/b]
+      [58] dup
+      [59] aload v4
+      [61] invokespecial #21
+        - Methodref [com/cloudsprite/statistics/b.<init> (Lcom/cloudsprite/statistics/MainService;)V]
+      [64] invokevirtual #22
+        - Methodref [com/cloudsprite/statistics/b.start ()V]
+      [67] aload_0 v0
+      [68] aload_1 v1
+      [69] iload_2 v2
+      [70] iload_3 v3
+      [71] invokespecial #16
+        - Methodref [android/app/Service.onStartCommand (Landroid/content/Intent;II)I]
+      [74] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 1):
+        - [67] Var: ..., Stack: (empty)
+  - Method:       a(Landroid/content/Context;)V
+    Access flags: 0x9
+      = public static void a(android.content.Context)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 18, locals = 2, stack = 4):
+      [0] new #7
+        - Class [android/content/Intent]
+      [3] dup
+      [4] aload_0 v0
+      [5] ldc #11
+        - Class [com/cloudsprite/statistics/MainService]
+      [7] invokespecial #18
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [10] astore_1 v1
+      [11] aload_0 v0
+      [12] aload_1 v1
+      [13] invokevirtual #17
+        - Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [16] pop
+      [17] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(Lcom/cloudsprite/statistics/MainService;)V
+    Access flags: 0x1008
+      = static synthetic void a(com.cloudsprite.statistics.MainService)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 55, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] dup
+      [2] astore_0 v0
+      [3] ldc #2
+        - String [statistics]
+      [5] iconst_0
+      [6] invokevirtual #20
+        - Methodref [com/cloudsprite/statistics/MainService.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [9] dup
+      [10] astore_0 v0
+      [11] invokeinterface #26
+        - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [16] ldc #3
+        - String [uploaded]
+      [18] iconst_1
+      [19] invokeinterface #29
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
+      [24] invokeinterface #28
+        - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [29] istore_0 v0
+      [30] new #13
+        - Class [java/lang/StringBuilder]
+      [33] dup
+      [34] ldc #4
+        - String [write preference ret ]
+      [36] invokespecial #23
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [39] iload_0 v0
+      [40] invokevirtual #24
+        - Methodref [java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;]
+      [43] invokevirtual #25
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [46] astore_0 v0
+      [47] ldc #2
+        - String [statistics]
+      [49] aload_0 v0
+      [50] invokestatic #19
+        - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+      [53] pop
+      [54] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/cloudsprite/statistics/b
+  Superclass:    java/lang/Thread
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class com.cloudsprite.statistics.b extends java.lang.Thread
+
+Interfaces (count = 0):
+
+Constant Pool (count = 106):
+  - String [http://kofphptest.sinaapp.com/reg.php]
+  - String [resCode = ]
+  - String [result = ]
+  - String [statistics]
+  - String [url = ]
+  - String [utf-8]
+  - Class [android/util/Log]
+  - Class [com/cloudsprite/statistics/MainService]
+  - Class [com/cloudsprite/statistics/a]
+  - Class [com/cloudsprite/statistics/b]
+  - Class [java/io/IOException]
+  - Class [java/lang/Exception]
+  - Class [java/lang/String]
+  - Class [java/lang/StringBuilder]
+  - Class [java/lang/Thread]
+  - Class [org/apache/http/HttpResponse]
+  - Class [org/apache/http/StatusLine]
+  - Class [org/apache/http/client/ClientProtocolException]
+  - Class [org/apache/http/client/HttpClient]
+  - Class [org/apache/http/client/methods/HttpGet]
+  - Class [org/apache/http/impl/client/DefaultHttpClient]
+  - Class [org/apache/http/util/EntityUtils]
+  - Fieldref [com/cloudsprite/statistics/b.a Lcom/cloudsprite/statistics/MainService;]
+  - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [com/cloudsprite/statistics/MainService.a (Lcom/cloudsprite/statistics/MainService;)V]
+  - Methodref [com/cloudsprite/statistics/a.a (Landroid/content/Context;)Ljava/lang/String;]
+  - Methodref [java/io/IOException.printStackTrace ()V]
+  - Methodref [java/lang/Exception.printStackTrace ()V]
+  - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/Thread.<init> ()V]
+  - Methodref [org/apache/http/client/ClientProtocolException.printStackTrace ()V]
+  - Methodref [org/apache/http/client/methods/HttpGet.<init> (Ljava/lang/String;)V]
+  - Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  - Methodref [org/apache/http/util/EntityUtils.toString (Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;]
+  - InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+  - InterfaceMethodref [org/apache/http/HttpResponse.getStatusLine ()Lorg/apache/http/StatusLine;]
+  - InterfaceMethodref [org/apache/http/StatusLine.getStatusCode ()I]
+  - InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [a (Landroid/content/Context;)Ljava/lang/String;]
+  - NameAndType [a (Lcom/cloudsprite/statistics/MainService;)V]
+  - NameAndType [a Lcom/cloudsprite/statistics/MainService;]
+  - NameAndType [append (I)Ljava/lang/StringBuilder;]
+  - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  - NameAndType [getEntity ()Lorg/apache/http/HttpEntity;]
+  - NameAndType [getStatusCode ()I]
+  - NameAndType [getStatusLine ()Lorg/apache/http/StatusLine;]
+  - NameAndType [printStackTrace ()V]
+  - NameAndType [toString ()Ljava/lang/String;]
+  - NameAndType [toString (Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;]
+  - NameAndType [v (Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [()I]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()Lorg/apache/http/HttpEntity;]
+  - Utf8 [()Lorg/apache/http/StatusLine;]
+  - Utf8 [()V]
+  - Utf8 [(I)Ljava/lang/StringBuilder;]
+  - Utf8 [(Landroid/content/Context;)Ljava/lang/String;]
+  - Utf8 [(Lcom/cloudsprite/statistics/MainService;)V]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [(Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;]
+  - Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Lcom/cloudsprite/statistics/MainService;]
+  - Utf8 [StackMapTable]
+  - Utf8 [a]
+  - Utf8 [android/util/Log]
+  - Utf8 [append]
+  - Utf8 [com/cloudsprite/statistics/MainService]
+  - Utf8 [com/cloudsprite/statistics/a]
+  - Utf8 [com/cloudsprite/statistics/b]
+  - Utf8 [execute]
+  - Utf8 [getEntity]
+  - Utf8 [getStatusCode]
+  - Utf8 [getStatusLine]
+  - Utf8 [http://kofphptest.sinaapp.com/reg.php]
+  - Utf8 [java/io/IOException]
+  - Utf8 [java/lang/Exception]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/StringBuilder]
+  - Utf8 [java/lang/Thread]
+  - Utf8 [org/apache/http/HttpResponse]
+  - Utf8 [org/apache/http/StatusLine]
+  - Utf8 [org/apache/http/client/ClientProtocolException]
+  - Utf8 [org/apache/http/client/HttpClient]
+  - Utf8 [org/apache/http/client/methods/HttpGet]
+  - Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  - Utf8 [org/apache/http/util/EntityUtils]
+  - Utf8 [printStackTrace]
+  - Utf8 [resCode = ]
+  - Utf8 [result = ]
+  - Utf8 [run]
+  - Utf8 [statistics]
+  - Utf8 [toString]
+  - Utf8 [url = ]
+  - Utf8 [utf-8]
+  - Utf8 [v]
+
+Fields (count = 1):
+  - Field:        a Lcom/cloudsprite/statistics/MainService;
+    Access flags: 0x1002
+      = private synthetic com.cloudsprite.statistics.MainService a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/cloudsprite/statistics/MainService;)V
+    Access flags: 0x0
+      = b(com.cloudsprite.statistics.MainService)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #23
+        - Fieldref [com/cloudsprite/statistics/b.a Lcom/cloudsprite/statistics/MainService;]
+      [5] aload_0 v0
+      [6] invokespecial #33
+        - Methodref [java/lang/Thread.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       run()V
+    Access flags: 0x11
+      = public final void run()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 177, locals = 4, stack = 3):
+      [0] aload_0 v0
+      [1] getfield #23
+        - Fieldref [com/cloudsprite/statistics/b.a Lcom/cloudsprite/statistics/MainService;]
+      [4] invokestatic #26
+        - Methodref [com/cloudsprite/statistics/a.a (Landroid/content/Context;)Ljava/lang/String;]
+      [7] astore_1 v1
+      [8] new #14
+        - Class [java/lang/StringBuilder]
+      [11] dup
+      [12] ldc #1
+        - String [http://kofphptest.sinaapp.com/reg.php]
+      [14] invokespecial #29
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [17] aload_1 v1
+      [18] invokevirtual #31
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [21] invokevirtual #32
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [24] astore_1 v1
+      [25] new #14
+        - Class [java/lang/StringBuilder]
+      [28] dup
+      [29] ldc #5
+        - String [url = ]
+      [31] invokespecial #29
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [34] aload_1 v1
+      [35] invokevirtual #31
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [38] invokevirtual #32
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [41] astore_3 v3
+      [42] ldc #4
+        - String [statistics]
+      [44] aload_3 v3
+      [45] invokestatic #24
+        - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+      [48] pop
+      [49] new #21
+        - Class [org/apache/http/impl/client/DefaultHttpClient]
+      [52] dup
+      [53] invokespecial #36
+        - Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [56] astore_2 v2
+      [57] new #20
+        - Class [org/apache/http/client/methods/HttpGet]
+      [60] dup
+      [61] aload_1 v1
+      [62] invokespecial #35
+        - Methodref [org/apache/http/client/methods/HttpGet.<init> (Ljava/lang/String;)V]
+      [65] astore_1 v1
+      [66] aload_2 v2
+      [67] aload_1 v1
+      [68] invokeinterface #41
+        - InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [73] dup
+      [74] astore_1 v1
+      [75] invokeinterface #39
+        - InterfaceMethodref [org/apache/http/HttpResponse.getStatusLine ()Lorg/apache/http/StatusLine;]
+      [80] invokeinterface #40
+        - InterfaceMethodref [org/apache/http/StatusLine.getStatusCode ()I]
+      [85] istore_2 v2
+      [86] new #14
+        - Class [java/lang/StringBuilder]
+      [89] dup
+      [90] ldc #2
+        - String [resCode = ]
+      [92] invokespecial #29
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [95] iload_2 v2
+      [96] invokevirtual #30
+        - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [99] invokevirtual #32
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [102] astore_3 v3
+      [103] ldc #4
+        - String [statistics]
+      [105] aload_3 v3
+      [106] invokestatic #24
+        - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+      [109] pop
+      [110] new #14
+        - Class [java/lang/StringBuilder]
+      [113] dup
+      [114] ldc #3
+        - String [result = ]
+      [116] invokespecial #29
+        - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [119] aload_1 v1
+      [120] invokeinterface #38
+        - InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+      [125] ldc #6
+        - String [utf-8]
+      [127] invokestatic #37
+        - Methodref [org/apache/http/util/EntityUtils.toString (Lorg/apache/http/HttpEntity;Ljava/lang/String;)Ljava/lang/String;]
+      [130] invokevirtual #31
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [133] invokevirtual #32
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [136] astore_3 v3
+      [137] ldc #4
+        - String [statistics]
+      [139] aload_3 v3
+      [140] invokestatic #24
+        - Methodref [android/util/Log.v (Ljava/lang/String;Ljava/lang/String;)I]
+      [143] pop
+      [144] iload_2 v2
+      [145] sipush 200
+      [148] ificmpne +28 (target=176)
+      [151] aload_0 v0
+      [152] getfield #23
+        - Fieldref [com/cloudsprite/statistics/b.a Lcom/cloudsprite/statistics/MainService;]
+      [155] invokestatic #25
+        - Methodref [com/cloudsprite/statistics/MainService.a (Lcom/cloudsprite/statistics/MainService;)V]
+      [158] return
+      [159] dup
+      [160] astore_1 v1
+      [161] invokevirtual #34
+        - Methodref [org/apache/http/client/ClientProtocolException.printStackTrace ()V]
+      [164] return
+      [165] dup
+      [166] astore_1 v1
+      [167] invokevirtual #27
+        - Methodref [java/io/IOException.printStackTrace ()V]
+      [170] return
+      [171] dup
+      [172] astore_1 v1
+      [173] invokevirtual #28
+        - Methodref [java/lang/Exception.printStackTrace ()V]
+      [176] return
+      Code attribute exceptions (count = 3):
+      - ExceptionInfo (66 -> 158: 159):
+      - Class [org/apache/http/client/ClientProtocolException]
+      - ExceptionInfo (66 -> 158: 165):
+      - Class [java/io/IOException]
+      - ExceptionInfo (66 -> 158: 171):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 4):
+        - [159] Var: , Stack: [a:org/apache/http/client/ClientProtocolException]
+        - [165] Var: ..., Stack: [a:java/io/IOException]
+        - [171] Var: ..., Stack: [a:java/lang/Exception]
+        - [176] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+

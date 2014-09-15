@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kivvi.livewallpaper.flowerzen.android"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    <uses-feature android:name="android.software.live_wallpaper" />
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+   <supports-screens android:anyDensity="true" /> 
+    <!-- IF YOU NEED SUPPORT FOR ALL SCREENS, REMOVE NEXT BLOCK. Less than 480x800 is disabled here -->
+	<compatible-screens>
+		<screen android:screenSize="normal" android:screenDensity="hdpi"  />
+		<screen android:screenSize="normal" android:screenDensity="xhdpi" />
+		<screen android:screenSize="large"  android:screenDensity="ldpi"  />
+		<screen android:screenSize="large"  android:screenDensity="mdpi"  />
+		<screen android:screenSize="large"  android:screenDensity="hdpi"  />
+		<screen android:screenSize="large"  android:screenDensity="xhdpi" />
+		<screen android:screenSize="xlarge" android:screenDensity="ldpi"  />
+		<screen android:screenSize="xlarge" android:screenDensity="mdpi"  />
+		<screen android:screenSize="xlarge" android:screenDensity="hdpi"  />
+		<screen android:screenSize="xlarge" android:screenDensity="xhdpi" />
+	</compatible-screens>
+	<!-- END OF BLOCK -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+		
+        <service
+            android:name=".LWP_Android"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+              <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />  
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+        </service>
+
+          <activity
+            android:name=".SettingLauncherActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--  
+        <activity 
+            android:name=".Preferences" 
+            android:label="@string/app_name" 
+            android:exported="true" 
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        -->
+      
+		<!-- DAYDREAM PART. If you don't need it, remove this block, LWP_Android_Daydream.java and PreferencesDayDream.java Android project -->
+		<!--  
+		<service android:name=".LWP_Android_Daydream" 
+		    android:label="@string/app_name" 
+		    android:exported="true" 
+		    android:icon="@drawable/ic_launcher">
+			<intent-filter>
+				<action android:name="android.service.dreams.DreamService" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+
+			<meta-data android:name="android.service.dream" android:resource="@xml/daydream" />
+		</service>
+
+		<activity android:name=".PreferencesDayDream" android:label="@string/app_name" android:exported="true" android:theme="@android:style/Theme.Black.NoTitleBar" />
+		-->
+		<!-- DAYDREAM -->
+		
+		
+    <meta-data android:value="539e807f56240be817018a75" android:name="UMENG_APPKEY"></meta-data>
+    <meta-data android:value="google play" android:name="UMENG_CHANNEL"/>
+    
+    </application>
+
+</manifest>

@@ -1,0 +1,43 @@
+
+
+1. Branch owner request review process
+   1) Send email with title as [CODE REVIEW]: branch name, and a short description about what has been changed.
+   2) Push the branch to the remote/origin.
+
+2. Reviewer check the code.
+   1) Add comments to the code. There are two formats of the comment.
+      a) // REVIEW+TODO(lihw): some comments
+         The comments are suggestions and proposals for branch owner to update his code. The reviewer
+         has not modified the related code block.
+      a) // REVIEW+DONE(lihw): some comments
+         Reviewer explains what and why he did in the code. He should have touched the code block. 
+   2) Commit the changes and reply the code review request email.
+
+3. Branch owner gives feedbacks
+   1) Change the code if needed based on review comments; add feedback comment
+   to the review comments, like
+   // FEEDBACK(jihao): thanks
+   if owner agrees with the suggestion and changes.
+   // FEEDBACK(jihao): concerns or reasons. 
+   if owner doesn't understand or has the concern about the review suggestions, he might raise his
+   question or defend his original version of the code.
+   2) Reply the code review email to notify the reviewer some changes are done.
+
+4. Reviewer check the feedbacks and code
+   1) If reviewer is OK with the feedback and changes, he deletes both review
+   and feedback comments.
+   2) Otherwise, he append more review comments. The whole comment conversion will like
+   // REVIEW+TODO(lihw): some review comments
+   // FEEDBACK(jihao): some feedback comments
+   // REVIEW+TODO(lihw): some more review comments
+   3) Reply the code review email to inform the branch owner.
+
+5. Loop from 3 - 4 until reviewer is OK with all changes. After that, he reply a "pass"
+to the code review email.
+
+6. Once branch owner receives the review pass email, he can then merge his
+branch to master. The merge should bring no compiling error anyway. If so,
+branch owner should fix the building error on the master. Make sure the latest
+master is always buildable before he pushes changes to the remote. Finally,
+branch owner should delete both local and remote development/story branches.
+   

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kivvi.crystalswan.android"
+    android:versionCode="6"
+    android:versionName="1.1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:thumbnail="@drawable/ic_launcher" >
+        <activity
+            android:name="com.kivvi.crystalswan.android.setting.SettingLauncherActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:enabled="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- <activity -->
+        <!-- android:name="com.kivvi.crystalswan.android.AndroidLauncher" -->
+        <!-- android:enabled="true" -->
+        <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenSize" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+        <activity
+            android:name="com.kivvi.crystalswan.android.setting.LiveWallpaperSettingsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="LiveWallpaperService"
+            android:label="@string/title"
+            android:permission="android.permission.BIND_WALLPAPER" >
+
+            <!-- 允许动态壁纸的权限 -->
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+        </service>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5370336756240b71e101ce22" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="google_play" />
+    </application>
+
+</manifest>

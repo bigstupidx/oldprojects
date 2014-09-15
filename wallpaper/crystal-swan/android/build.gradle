@@ -1,0 +1,271 @@
+android {
+    buildToolsVersion "19.0.3"
+    compileSdkVersion 19
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        instrumentTest.setRoot('tests')
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+        }
+    }
+}
+
+// needed to add JNI shared libraries to APK when compiling on CLI
+tasks.withType(com.android.build.gradle.tasks.PackageApplication) { pkgTask ->
+    pkgTask.jniFolders = new HashSet<File>()
+    pkgTask.jniFolders.add(new File(projectDir, 'libs'))
+}
+
+// called every time gradle gets executed, takes the native dependencies of
+// the natives configuration, and extracts them to the proper libs/ folders
+// so they get packed with the APK.
+task copyAndroidNatives() { 
+    file("libs/armeabi/").mkdirs();
+    file("libs/armeabi-v7a/").mkdirs();
+    file("libs/x86/").mkdirs();
+
+    configurations.natives.files.each { jar ->
+        def outputDir = null
+        if(jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+        if(jar.name.endsWith("natives-armeabi.jar")) outputDir = file("libs/armeabi")
+        if(jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+        if(outputDir != null) {
+            copy {
+                from zipTree(jar)
+                into outputDir
+                include "*.so"
+            }
+        }
+    }
+}
+
+task run(type: Exec) {
+    def adb = "$System.env.ANDROID_HOME/platform-tools/adb"
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.kivvi.crystalswan.android/com.kivvi.crystalswan.android.AndroidLauncher'
+}
+
+// sets up the Android Eclipse project, using the old Ant based build.
+eclipse {
+    // need to specify Java source sets explicitely, SpringSource Gradle Eclipse plugin
+    // ignores any nodes added in classpath.file.withXml
+    sourceSets {
+        main {
+            java.srcDirs "src", 'gen'
+        }
+    }
+
+    jdt {
+        sourceCompatibility = 1.6
+        targetCompatibility = 1.6
+    }
+
+    classpath {
+        plusConfigurations += project.configurations.compile        
+        containers 'com.android.ide.eclipse.adt.ANDROID_FRAMEWORK', 'com.android.ide.eclipse.adt.LIBRARIES'       
+    }
+
+    project {
+        name = appName + "-android"
+        natures 'com.android.ide.eclipse.adt.AndroidNature'
+        buildCommands.clear();
+        buildCommand "com.android.ide.eclipse.adt.ResourceManagerBuilder"
+        buildCommand "com.android.ide.eclipse.adt.PreCompilerBuilder"
+        buildCommand "org.eclipse.jdt.core.javabuilder"
+        buildCommand "com.android.ide.eclipse.adt.ApkBuilder"
+    }
+}
+
+// sets up the Android Idea project, using the old Ant based build.
+idea {
+    module {
+        sourceDirs += file("src");
+        scopes = [ COMPILE: [plus:[project.configurations.compile]]]        
+
+        iml {
+            withXml {
+                def node = it.asNode()
+                def builder = NodeBuilder.newInstance();
+                builder.current = node;
+                builder.component(name: "FacetManager") {
+                    facet(type: "android", name: "Android") {
+                        configuration {
+                            option(name: "UPDATE_PROPERTY_FILES", value:"true")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ument sdk
+ext {
+    umengAnalyticsVersion = '5.2.2'
+}
+
+dependencies {
+    compile "com.umeng.sdk:analytics:$umengAnalyticsVersion"
+}
+
+// channel
+ext {
+    channelNeedCopy = true
+    apkName = ''
+    currentChannel = 'play'
+}
+
+def loadChannel() {
+    println "loadChannel func"
+
+    // get props
+    Properties props = new Properties()
+    File propsFile = new File("$projectDir" + '/channel.properties')
+    if (propsFile.exists()) {
+        props.load(propsFile.newDataInputStream())
+
+        // get currentChannel
+        ext.currentChannel = props.getProperty('channel')
+        println "currentChannel = " + ext.currentChannel
+    } else {
+        println "can not find channel.properties, use default value: " + ext.currentChannel
+    }
+}
+
+def saveChannel() {
+    // get props
+    Properties props = new Properties()
+    File propsFile = new File("$projectDir" + '/channel.properties')
+    if (propsFile.exists()) {
+        props.load(propsFile.newDataInputStream())
+    }
+
+    // save currentChannel
+    props.setProperty('channel', ext.currentChannel)
+    props.store(propsFile.newWriter(), null)
+}
+
+def checkChannel() {
+    println "checkChannel task"
+
+    // get currentChannel from file.
+    loadChannel()
+
+    // get command line property channel
+    if (project.hasProperty('channel')) {
+        ext.currentChannel = project.channel
+        println "get command line property(channel) = " + ext.currentChannel
+    } else {
+        println "command line has no property(channel)"
+    }
+
+    // save currentChannel to file.
+    saveChannel()
+
+    // TODO: get channelNeedCopy
+    ext.channelNeedCopy = true
+    println "ext.channelNeedCopy = " + project.ext.channelNeedCopy
+}
+
+def copyChannel() {
+    if (ext.channelNeedCopy) {
+        copy {
+            from("$projectDir/channels/" + ext.currentChannel)
+            into(".")
+            include '**'
+        }
+
+        println "copy $projectDir/channels/" + ext.currentChannel + " to ."
+
+        copy {
+            from("$projectDir")
+            into("$projectDir/assets/data")
+            include 'channel.properties'
+        }
+
+        println "copy $projectDir/channel.properties" + ext.currentChannel + " to $projectDir/assets/data"
+    }    
+}
+
+import com.android.builder.DefaultManifestParser
+
+def getApkName() {
+    // get apk name.
+    def manifestParser = new DefaultManifestParser()
+    def versionName = manifestParser.getVersionName(android.sourceSets.main.manifest.srcFile)
+    ext.apkName = ext.appName + "-" + versionName
+    ext.apkName = ext.apkName + '-' + ext.currentChannel
+    ext.apkName = ext.apkName + ".apk"
+}
+
+task encrypter(type: Exec) {
+    println "encrypter func"
+
+    checkChannel()
+
+    if (project.ext.currentChannel == "kittyplayex") {
+        commandLine "cmd", "/c", "..\\..\\tools\\encrypter\\encrypter.bat", "e", "./assets"
+    } else {
+        commandLine "cmd", "/c", "..\\..\\tools\\encrypter\\encrypter.bat", "d", "./assets"
+    }
+}
+
+task checkoutChannel() {
+    println "checkoutChannel func"
+
+    checkChannel()
+
+    copyChannel()
+
+    getApkName()
+
+    doLast {
+        println "checkoutChannel doLast"
+
+        tasks.encrypter.execute()
+    }
+}
+
+task copyApk() << {
+    println "copyApk func"
+
+    copy {
+        from("./build/apk")
+        into("./dist")
+        include("*.apk")
+        rename("android-release-unsigned.apk", project.ext.apkName)
+    }
+}
+
+task apksign(type: Exec) {
+    println "apksign func"
+
+    println "apkName = " + project.ext.apkName
+    workingDir './dist'
+    commandLine "cmd", "/c", "..\\..\\..\\tools\\apksign\\go.bat", project.ext.apkName
+}
+
+task dist(dependsOn: ['checkoutChannel', 'assembleRelease', 'copyApk']) {
+    println "dist func"
+
+    doLast {
+        println "dist doLast"
+        tasks.apksign.execute()
+    }
+}
+
+tasks.preBuild.mustRunAfter tasks.checkoutChannel
+tasks.copyApk.mustRunAfter tasks.assembleRelease
+tasks.apksign.mustRunAfter tasks.copyApk

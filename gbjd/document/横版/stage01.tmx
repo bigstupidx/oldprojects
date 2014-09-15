@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="25" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tsx" tilewidth="32" tileheight="32">
+  <image source="tsx.png" width="128" height="128"/>
+ </tileset>
+ <layer name="Background" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYWBgYBnFo3gUj+JRPKwwAD0bBd0=
+  </data>
+ </layer>
+ <layer name="Rocks" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBh5gAkN09p8atuDy3xa+YfagJD7qeGfUTtoYw+lgF5pl155YzDnPQD0cwC9
+  </data>
+ </layer>
+ <objectgroup name="Actor" width="25" height="15">
+  <object name="Boy" type="Boy" gid="1" x="224" y="192"/>
+  <object name="Girl" type="Girl" gid="3" x="576" y="192"/>
+ </objectgroup>
+</map>

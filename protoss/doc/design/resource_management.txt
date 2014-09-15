@@ -1,0 +1,47 @@
+-------------------------------
+Design objectives
+-------------------------------
+
+We need resource managment in Protoss as the memory in handheld device is
+always limited. Thus, engine should monitor the use of memory and discard those
+resources which have not been used for a long time. The cleanup usually happens
+during the new objects are about to be created while the memory is not
+sufficient. 
+
+As long as the resource manager handles all the object creation and destroying,
+directly creating resoure objects using constructors are forbidden. The following
+code snippet shows the usage.
+
+PMesh* mesh = context->getResourceManager()->retainMesh("object.mes");
+PTexture* texture = context->getResourceManager()->retainTexture("texture.png");
+PShader* shader = context->getResourceManager()->retainShader("vert.glsl", "frag.glsl");
+
+PMesh* mesh = pNew(PMesh); // It will generate a building error.
+
+
+- Each resource object is marked as either default, managed, semi-managed and
+  system. Default resource objects can only be restore and discarded manually,
+  or when the entire resource manager gets killed; managed resource objects will
+  be discarded by resource manager when the memory is running low, and restored
+  when it is referred by renderer or other function modules in the engine. It
+  can't be deleted/restored directly; semi-managed resource object are able to
+  be deleted/restored by either manager or code; system is similar to default
+  type while it is only about system memory (it can not be marked on a GPU
+  related object)
+- Each resource object has two public methods, discard and restore. The former
+  releases the memory and other resources of this object, and latter reloads
+  the object into the memory from file or other media.
+- Each resource object has a reference count, a last reference timestamp and a
+  type key for sorting.
+- All resource objects will be deleted when resource manager is killed.
+- Resource object can tell whether it is inside memory or not.
+- Resource object's restore method should be thread-safe.
+- Each resource object should contain discard and pause interface which will be
+  called at the pause and resume of the main activity.
+- Each resource object should has a counter to indicate how many times it is
+  referred and the last referred timestamp.
+- Each resource object is unique in the current context identified by its
+  name/key.
+- All GPU resource objects will be discarded when the activity is paused and
+  restored when it is resumed.
+

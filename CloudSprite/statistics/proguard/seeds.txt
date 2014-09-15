@@ -1,0 +1,6 @@
+com.cloudsprite.statistics.MainActivity
+com.cloudsprite.statistics.MainActivity: MainActivity()
+com.cloudsprite.statistics.MainReceiver
+com.cloudsprite.statistics.MainReceiver: MainReceiver()
+com.cloudsprite.statistics.MainService
+com.cloudsprite.statistics.MainService: MainService()

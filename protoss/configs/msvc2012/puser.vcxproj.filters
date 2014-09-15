@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="kernel">
+      <UniqueIdentifier>{ff8f27f9-0752-4ccf-8cae-2e48886ac71c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{1a07286f-0946-4a2c-837f-358ac7938569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderer">
+      <UniqueIdentifier>{7f42d7fd-780e-4b71-9126-7458e12c8eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderer\cull">
+      <UniqueIdentifier>{48bef63c-3d49-415f-9b55-64ebf09c212b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="renderer\sort">
+      <UniqueIdentifier>{019fa413-674c-4a53-91b7-aad1aef70c85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scene_graph">
+      <UniqueIdentifier>{81747356-1e97-4eed-a5f8-4be42eb50f3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="property">
+      <UniqueIdentifier>{d39f5a73-8971-415c-b534-d8c3767b0889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{f3c5f1c0-d5ac-4682-a5c8-ce096f9683f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\user\kernel\pactivity.cpp">
+      <Filter>kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\kernel\pcontext.cpp">
+      <Filter>kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\kernel\pcontextproperties.cpp">
+      <Filter>kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\kernel\pdevice.cpp">
+      <Filter>kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\kernel\pinput.cpp">
+      <Filter>kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\resource\pframebuffer.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\resource\pmesh.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\resource\presourcemanager.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\resource\presourceobject.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\resource\pshader.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\resource\ptexture.cpp">
+      <Filter>resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\pcamera.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\prenderpass.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\prenderstate.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\prendertarget.cpp">
+      <Filter>renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\cull\pabstracctculler.cpp">
+      <Filter>renderer\cull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\cull\pculling.cpp">
+      <Filter>renderer\cull</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\sort\pabstractsorter.cpp">
+      <Filter>renderer\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\renderer\sort\psorting.cpp">
+      <Filter>renderer\sort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\scene_graph\pscene.cpp">
+      <Filter>scene_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\property\pabstractproperty.cpp">
+      <Filter>property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\base\pdata.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\base\pdrawable.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\user\base\pobject.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\user\kernel\pactivity.h">
+      <Filter>kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\kernel\pcontext.h">
+      <Filter>kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\kernel\pcontextproperties.h">
+      <Filter>kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\kernel\pdevice.h">
+      <Filter>kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\kernel\pinput.h">
+      <Filter>kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\resource\pframebuffer.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\resource\pmesh.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\resource\presourcemanager.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\resource\presourceobject.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\resource\pshader.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\resource\ptexture.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\pcamera.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\prenderpass.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\prenderstate.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\prendertarget.h">
+      <Filter>renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\cull\pabstractculler.h">
+      <Filter>renderer\cull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\cull\pculling.h">
+      <Filter>renderer\cull</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\sort\pabstractsorter.h">
+      <Filter>renderer\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\renderer\sort\psorting.h">
+      <Filter>renderer\sort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\scene_graph\pscene.h">
+      <Filter>scene_graph</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\property\pabstractproperty.h">
+      <Filter>property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\property\pcomboproperty.h">
+      <Filter>property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\property\psimpleproperty.h">
+      <Filter>property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\base\pdata.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\base\pdrawable.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\user\base\pobject.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\src\user\base\readme.txt">
+      <Filter>base</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

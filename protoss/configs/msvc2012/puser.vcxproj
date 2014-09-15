@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{592613DF-8699-49FE-8343-482A8A3215FA}</ProjectGuid>
+    <RootNamespace>cpptest</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="engine.props" />
+    <Import Project="protoss.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60315.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(EngineRoot)\lib\msvc2012\Debug\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_d.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\user\base\pdata.cpp" />
+    <ClCompile Include="..\..\src\user\base\pdrawable.cpp" />
+    <ClCompile Include="..\..\src\user\base\pobject.cpp" />
+    <ClCompile Include="..\..\src\user\kernel\pactivity.cpp" />
+    <ClCompile Include="..\..\src\user\kernel\pcontext.cpp" />
+    <ClCompile Include="..\..\src\user\kernel\pcontextproperties.cpp" />
+    <ClCompile Include="..\..\src\user\kernel\pdevice.cpp" />
+    <ClCompile Include="..\..\src\user\kernel\pinput.cpp" />
+    <ClCompile Include="..\..\src\user\property\pabstractproperty.cpp" />
+    <ClCompile Include="..\..\src\user\resource\pframebuffer.cpp" />
+    <ClCompile Include="..\..\src\user\resource\pmesh.cpp" />
+    <ClCompile Include="..\..\src\user\resource\presourcemanager.cpp" />
+    <ClCompile Include="..\..\src\user\resource\presourceobject.cpp" />
+    <ClCompile Include="..\..\src\user\resource\pshader.cpp" />
+    <ClCompile Include="..\..\src\user\resource\ptexture.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\pcamera.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\prenderpass.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\prenderstate.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\prendertarget.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\cull\pabstracctculler.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\cull\pculling.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\sort\pabstractsorter.cpp" />
+    <ClCompile Include="..\..\src\user\renderer\sort\psorting.cpp" />
+    <ClCompile Include="..\..\src\user\scene_graph\pscene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\user\base\pdata.h" />
+    <ClInclude Include="..\..\src\user\base\pdrawable.h" />
+    <ClInclude Include="..\..\src\user\base\pobject.h" />
+    <ClInclude Include="..\..\src\user\kernel\pactivity.h" />
+    <ClInclude Include="..\..\src\user\kernel\pcontext.h" />
+    <ClInclude Include="..\..\src\user\kernel\pcontextproperties.h" />
+    <ClInclude Include="..\..\src\user\kernel\pdevice.h" />
+    <ClInclude Include="..\..\src\user\kernel\pinput.h" />
+    <ClInclude Include="..\..\src\user\property\pabstractproperty.h" />
+    <ClInclude Include="..\..\src\user\property\pcomboproperty.h" />
+    <ClInclude Include="..\..\src\user\property\psimpleproperty.h" />
+    <ClInclude Include="..\..\src\user\resource\pframebuffer.h" />
+    <ClInclude Include="..\..\src\user\resource\pmesh.h" />
+    <ClInclude Include="..\..\src\user\resource\presourcemanager.h" />
+    <ClInclude Include="..\..\src\user\resource\presourceobject.h" />
+    <ClInclude Include="..\..\src\user\resource\pshader.h" />
+    <ClInclude Include="..\..\src\user\resource\ptexture.h" />
+    <ClInclude Include="..\..\src\user\renderer\pcamera.h" />
+    <ClInclude Include="..\..\src\user\renderer\prenderpass.h" />
+    <ClInclude Include="..\..\src\user\renderer\prenderstate.h" />
+    <ClInclude Include="..\..\src\user\renderer\prendertarget.h" />
+    <ClInclude Include="..\..\src\user\renderer\cull\pabstractculler.h" />
+    <ClInclude Include="..\..\src\user\renderer\cull\pculling.h" />
+    <ClInclude Include="..\..\src\user\renderer\sort\pabstractsorter.h" />
+    <ClInclude Include="..\..\src\user\renderer\sort\psorting.h" />
+    <ClInclude Include="..\..\src\user\scene_graph\pscene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="pcore.vcxproj">
+      <Project>{77efbf95-ff3a-4864-a910-f0f75c474100}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\src\user\base\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

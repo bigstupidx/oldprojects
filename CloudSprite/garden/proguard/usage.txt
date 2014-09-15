@@ -1,0 +1,913 @@
+com.cooee.wallpaper.framework.AAConfigChooser:
+    17:18:public AAConfigChooser(int)
+com.cooee.wallpaper.framework.ConfigMode:
+    3:3:public ConfigMode()
+com.cooee.wallpaper.framework.GLWallpaperService$GLEngine:
+    private static final java.lang.String TAG
+com.cooee.wallpaper.framework.GLWallpaperService$GLEngine$WallpaperGLSurfaceView:
+    private static final java.lang.String TAG
+com.cooee.wallpaper.framework.Logger:
+    private static final java.lang.String TAG
+    public static final int ERROR
+    public static final int WARNING
+    public static final int MESSAGE
+    public static final int DEBUG
+    public static final int ON_ERROR_THROW_EXCEPTION
+    public static final int ON_ERROR_EXIT
+    public static final int ON_ERROR_RESUME_NEXT
+    public static final int LL_ONLY_ERRORS
+    public static final int LL_ERRORS_AND_WARNINGS
+    public static final int LL_VERBOSE
+    public static final int LL_DEBUG
+    7:7:public Logger()
+    38:38:public static boolean isDebugEnabled()
+    78:79:public static void log(java.lang.Throwable)
+    82:83:public static void log(java.lang.Throwable,int)
+com.cooee.wallpaper.framework.OpenGLES2WallpaperService:
+    private static final java.lang.String TAG
+com.cooee.wallpaper.lotus.BuildConfig
+com.cooee.wallpaper.lotus.Lotus:
+    private static final java.lang.String TAG
+    75:78:public static synchronized com.cooee.wallpaper.lotus.Lotus getInstance(android.content.Context)
+com.cooee.wallpaper.lotus.R
+com.cooee.wallpaper.lotus.R$attr
+com.cooee.wallpaper.lotus.R$drawable
+com.cooee.wallpaper.lotus.R$raw
+com.cooee.wallpaper.lotus.R$string
+com.cooee.wallpaper.lotus.R$xml
+com.cooee.wallpaper.lotus.Renderer:
+    private static final java.lang.String TAG
+com.cooee.wallpaper.lotus.WallpaperService:
+    public static final boolean useGLES2
+com.threed.jpct.Animation:
+    private static final long serialVersionUID
+    public static final int LINEAR
+    public static final int KEYFRAMESONLY
+    public static final int USE_WRAPPING
+    public static final int USE_CLAMPING
+    101:102:public void setCaching(boolean)
+    111:114:public void strip()
+    125:129:public void remove(int)
+    139:139:public java.lang.String getName(int)
+    150:150:public int[] getSequenceBorders(int)
+    162:168:public int getSequence(java.lang.String)
+    218:218:public int getSequenceCount()
+    230:235:public void setClampingMode(int)
+    287:288:public void setInterpolationMethod(int)
+    299:304:void translateMesh(com.threed.jpct.Matrix,com.threed.jpct.Matrix)
+com.threed.jpct.BufferUtilFactory:
+    8:8:BufferUtilFactory()
+com.threed.jpct.Camera:
+    private static final long serialVersionUID
+    public static final int CAMERA_MOVEIN
+    public static final int CAMERA_MOVEOUT
+    public static final int CAMERA_MOVEDOWN
+    public static final int CAMERA_MOVEUP
+    public static final int CAMERA_MOVELEFT
+    public static final int CAMERA_MOVERIGHT
+    public static final int CAMERA_DONT_MOVE
+    public static final boolean SLIDE
+    public static final boolean DONT_SLIDE
+    public static final int ELLIPSOID_ALIGNED
+    public static final int ELLIPSOID_TRANSFORMED
+    173:173:public com.threed.jpct.SimpleVector getXAxis()
+    182:182:public com.threed.jpct.SimpleVector getYAxis()
+    191:191:public com.threed.jpct.SimpleVector getZAxis()
+    203:203:public com.threed.jpct.SimpleVector getDirection()
+    218:218:public com.threed.jpct.SimpleVector getDirection(com.threed.jpct.SimpleVector)
+    230:232:public com.threed.jpct.SimpleVector getUpVector()
+    244:244:public com.threed.jpct.SimpleVector getSideVector()
+    248:248:private com.threed.jpct.SimpleVector getVector(int)
+    252:257:private com.threed.jpct.SimpleVector getVector(int,com.threed.jpct.SimpleVector)
+    269:270:public float convertRADAngleIntoFOV(float)
+    281:283:public float convertDEGAngleIntoFOV(float)
+    296:298:public void setFOVLimits(float,float)
+    306:306:public float getMaxFOV()
+    315:315:public float getMinFOV()
+    346:356:public void setYFOV(float)
+    386:394:public void increaseFOV(float)
+    403:411:public void decreaseFOV(float)
+    419:420:public void setFOVtoDefault()
+    514:517:public void align(com.threed.jpct.Object3D)
+    526:530:public void setPositionToCenter(com.threed.jpct.Object3D)
+    558:561:public void setPosition(float,float,float)
+    573:576:public void setOrientation(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    586:617:public com.threed.jpct.SimpleVector transform(com.threed.jpct.SimpleVector)
+    636:645:public void moveCamera(int,float)
+    657:660:public void moveCamera(com.threed.jpct.SimpleVector,float)
+    676:677:public void rotateCameraAxis(com.threed.jpct.SimpleVector,float)
+    689:690:public void rotateCameraX(float)
+    702:703:public void rotateCameraY(float)
+    715:716:public void rotateCameraZ(float)
+    730:731:public void rotateAxis(com.threed.jpct.SimpleVector,float)
+    740:741:public void rotateX(float)
+    750:751:public void rotateY(float)
+    760:761:public void rotateZ(float)
+    779:780:public void setBack(com.threed.jpct.Matrix)
+    795:796:public void setEllipsoidMode(int)
+    806:806:public int getEllipsoidMode()
+    817:817:public com.threed.jpct.Matrix getProjectionMatrix(com.threed.jpct.FrameBuffer)
+    830:871:public com.threed.jpct.Matrix getProjectionMatrix(com.threed.jpct.FrameBuffer,float,float)
+    875:900:private void frustum(float[],float,float,float,float,float,float)
+com.threed.jpct.CollisionEvent
+com.threed.jpct.CollisionInfo
+com.threed.jpct.CollisionListener
+com.threed.jpct.CompiledInstance:
+    protected static final long serialVersionUID
+    protected static final float COORD_SCALE
+    118:118:public java.lang.String getKey()
+    739:741:public void error(java.lang.Exception)
+    1266:1266:public synchronized boolean isFilled()
+com.threed.jpct.Config:
+    static final int BLACK_MASK
+    static final float ADD_Z_SORT
+    private static final java.lang.String INT_VERSION
+    static final float COLLIDE_CAMERA_RANGE
+    18:19:private Config()
+    33:33:public static java.lang.String getVersion()
+    49:60:public static void setParameterValue(java.lang.String,java.lang.Object)
+    73:76:public static java.lang.Object getParameterValue(java.lang.String)
+    87:97:public static java.lang.String[] getParameterNames()
+com.threed.jpct.DeSerializer
+com.threed.jpct.DepthBuffer:
+    int renderBuffer
+    int width
+    int height
+    int lastHandlerId
+    27:30:public DepthBuffer(int,int)
+    37:37:public int getHeight()
+    45:45:public int getWidth()
+com.threed.jpct.FloatBufferWrapper:
+    36:39:public void flip()
+    78:81:public void put(int[])
+    84:87:public void put(com.threed.jpct.FloatBufferWrapper)
+    98:101:public void position(int)
+    104:104:public java.nio.FloatBuffer slice()
+    108:108:public int remaining()
+    116:119:public void clear()
+com.threed.jpct.FrameBuffer:
+    private static final long serialVersionUID
+    public static final boolean OPAQUE_BLITTING
+    public static final boolean TRANSPARENT_BLITTING
+    117:118:public FrameBuffer(int,int)
+    139:139:public int getOpenGLMajorVersion()
+    149:149:public boolean isInitialized()
+    163:168:public void setRenderTarget(int)
+    196:201:public void setRenderTarget(int,int,int,int,int,boolean)
+    216:217:public void setRenderTarget(com.threed.jpct.Texture)
+    245:263:public void setRenderTarget(com.threed.jpct.Texture,int,int,int,int,boolean)
+    271:274:public void removeRenderTarget()
+    287:289:public void setVirtualDimensions(int,int)
+    304:309:public void addPostProcessor(com.threed.jpct.IPostProcessor)
+    346:355:public void runPostProcessors()
+    365:366:public void setPaintListener(com.threed.jpct.IPaintListener)
+    389:392:public void freeMemory()
+    419:419:public float getCenterX()
+    429:429:public float getCenterY()
+    447:448:public void clearZBufferOnly()
+    457:458:public void clearColorBufferOnly(com.threed.jpct.RGBColor)
+    489:489:public int[] getPixels()
+    514:519:public int[] getPixels(int[])
+    559:560:public void blit(com.threed.jpct.Texture,int,int,int,int,int,int,boolean)
+    659:660:public void blit(com.threed.jpct.Texture,int,int,int,int,int,int,int,int,int,boolean)
+    707:712:public void blit(int[],int,int,int,int,int,int,int,int,boolean)
+    726:727:public void sync()
+    733:734:public void flush()
+com.threed.jpct.GL20:
+    1637:1640:private void clearErrors()
+    1774:1909:public void setRenderTarget(com.threed.jpct.Texture,com.threed.jpct.GLRenderer,com.threed.jpct.FrameBuffer)
+    1912:1932:private void checkFrameBufferObject()
+com.threed.jpct.GL20CompLayer:
+    9:9:GL20CompLayer()
+com.threed.jpct.GL20Handler:
+    public abstract void setRenderTarget(com.threed.jpct.Texture,com.threed.jpct.GLRenderer,com.threed.jpct.FrameBuffer)
+com.threed.jpct.GLRenderer:
+    private static final int VERTEX_ARRAY_SIZE
+    private static final boolean AGGREGATE_BLITS
+    240:241:public final void setPaintListener(com.threed.jpct.IPaintListener)
+    244:244:public final boolean isInitialized()
+    285:309:private void doPostProcessing(com.threed.jpct.FrameBuffer,com.threed.jpct.IPostProcessor)
+    361:364:private void disableAllHigherStages()
+    673:679:protected void addForUnload(com.threed.jpct.Texture)
+    1216:1239:private void prepareForBlitting(int[],int,int)
+    1607:1613:void upload(com.threed.jpct.Texture)
+    1647:1654:void resetViewport(com.threed.jpct.FrameBuffer)
+    1657:1659:private void setViewport(com.threed.jpct.FrameBuffer)
+    1663:1706:private void enableScissor(com.threed.jpct.FrameBuffer,com.threed.jpct.Texture,int,int,int,int)
+    1709:1713:private void disableScissor()
+    1720:1722:public void blitTexture(com.threed.jpct.Texture,com.threed.jpct.FrameBuffer,int,int,int,int,int,int,boolean)
+    1732:1735:public void blitIntArray(int[],com.threed.jpct.FrameBuffer,int,int,int,int,int,int,boolean,int,int)
+    1787:1795:public void clearZBufferOnly()
+    1798:1817:public void clearColorBufferOnly(com.threed.jpct.RGBColor)
+    1820:1855:public void grabScreen(com.threed.jpct.FrameBuffer,int[])
+    1880:1882:public void postProcess(com.threed.jpct.FrameBuffer,com.threed.jpct.IPostProcessor)
+    1890:1909:public void setRenderTarget(com.threed.jpct.Texture,com.threed.jpct.FrameBuffer,int,int,int,int,boolean)
+    2401:2403:public void sync()
+    2406:2407:public void flush()
+com.threed.jpct.GLSLShader:
+    205:206:public static void addReplacement(java.lang.String,java.lang.String)
+    217:218:public static void setShaderLocator(com.threed.jpct.ShaderLocator)
+    420:420:public int getProgram()
+    434:435:public void setStaticUniform(java.lang.String,int)
+    448:449:public void setStaticUniform(java.lang.String,float)
+    462:463:public void setStaticUniform(java.lang.String,float[])
+    476:477:public void setStaticFloatArrayUniform(java.lang.String,float[])
+    490:491:public void setStaticUniform(java.lang.String,com.threed.jpct.SimpleVector[])
+    504:505:public void setStaticUniform(java.lang.String,com.threed.jpct.SimpleVector)
+    518:519:public void setStaticUniform(java.lang.String,com.threed.jpct.Matrix)
+    531:532:public void setUniform(java.lang.String,int)
+    544:545:public void setUniform(java.lang.String,float)
+    557:558:public void setUniform(java.lang.String,com.threed.jpct.SimpleVector)
+    570:571:public void setUniform(java.lang.String,com.threed.jpct.SimpleVector[])
+    596:597:public void setFloatArrayUniform(java.lang.String,float[])
+    609:615:public void setUniform(java.lang.String,com.threed.jpct.Matrix)
+    745:755:private java.nio.FloatBuffer toFloatBuffer(com.threed.jpct.Matrix,java.nio.FloatBuffer)
+    759:781:private void set(java.lang.String,int,boolean)
+    784:806:private void set(java.lang.String,float,boolean)
+    838:860:private void set(java.lang.String,com.threed.jpct.SimpleVector,boolean)
+    863:885:private void set(java.lang.String,com.threed.jpct.SimpleVector[],boolean)
+    888:910:private void set(java.lang.String,java.nio.FloatBuffer,boolean)
+com.threed.jpct.GLSLShader$Uniform:
+    public static final int INT
+    public static final int FLOAT
+    public static final int FLOAT_ARRAY
+    public static final int MATRIX
+    public static final int VECTOR
+    public static final int VECTOR_ARRAY
+    public static final int SINGLE_FLOAT_ARRAY
+    1133:1134:public void setValue(int)
+    1137:1138:public void setValue(float)
+    1145:1146:public void setValue(java.nio.FloatBuffer)
+    1149:1150:public void setValue(com.threed.jpct.SimpleVector)
+    1153:1164:public void setValue(com.threed.jpct.SimpleVector[])
+com.threed.jpct.GenericVertexController:
+    private static final long serialVersionUID
+    private com.threed.jpct.SimpleVector[] meshData
+    private com.threed.jpct.SimpleVector[] normalData
+    private boolean initialized
+    20:20:public GenericVertexController()
+    49:104:public final boolean init(com.threed.jpct.Mesh,boolean)
+    114:114:public boolean setup()
+    118:118:public final com.threed.jpct.SimpleVector[] getSourceMesh()
+    122:122:public final com.threed.jpct.SimpleVector[] getSourceNormals()
+    130:130:public final com.threed.jpct.SimpleVector[] getDestinationNormals()
+    134:134:public final int getMeshSize()
+    139:160:public void refreshMeshData()
+    276:278:public final void destroy()
+    285:285:public void cleanup()
+    288:299:public int[] getPolygonIDs(int,int)
+com.threed.jpct.IPostProcessor:
+    public abstract void init(com.threed.jpct.FrameBuffer)
+    public abstract void process()
+    public abstract boolean isInitialized()
+com.threed.jpct.ITextureEffect:
+    public abstract void init(com.threed.jpct.Texture)
+    public abstract void apply(int[],int[])
+    public abstract boolean containsAlpha()
+com.threed.jpct.IVertexController:
+    public static final boolean ALTER_SOURCE_MESH
+    public static final boolean PRESERVE_SOURCE_MESH
+    public abstract boolean init(com.threed.jpct.Mesh,boolean)
+    public abstract boolean setup()
+    public abstract com.threed.jpct.SimpleVector[] getSourceMesh()
+    public abstract com.threed.jpct.SimpleVector[] getSourceNormals()
+    public abstract com.threed.jpct.SimpleVector[] getDestinationMesh()
+    public abstract com.threed.jpct.SimpleVector[] getDestinationNormals()
+    public abstract int getMeshSize()
+    public abstract void refreshMeshData()
+    public abstract void destroy()
+    public abstract void cleanup()
+    public abstract int[] getPolygonIDs(int,int)
+com.threed.jpct.IntList:
+    31:33:public void clear()
+    60:63:public void compact()
+com.threed.jpct.IntegerC:
+    private static final int offset
+    8:8:IntegerC()
+com.threed.jpct.Interact2D:
+    private static final float VIEWPLANE_Z_VALUE
+    16:18:private Interact2D()
+    35:35:public static com.threed.jpct.SimpleVector reproject2D3D(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,int,int)
+    55:55:public static com.threed.jpct.SimpleVector reproject2D3D(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,int,int,com.threed.jpct.SimpleVector)
+    73:76:public static com.threed.jpct.SimpleVector reproject2D3DWS(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,int,int)
+    96:99:public static com.threed.jpct.SimpleVector reproject2D3DWS(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,int,int,com.threed.jpct.SimpleVector)
+    119:119:public static com.threed.jpct.SimpleVector reproject2D3D(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,int,int,float)
+    170:170:public static com.threed.jpct.SimpleVector project3D2D(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,com.threed.jpct.SimpleVector)
+    195:195:public static synchronized com.threed.jpct.SimpleVector project3D2D(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    217:217:public static com.threed.jpct.SimpleVector projectCenter3D2D(com.threed.jpct.FrameBuffer,com.threed.jpct.Object3D)
+    250:258:public static com.threed.jpct.SimpleVector projectCenter3D2D(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,com.threed.jpct.Object3D)
+    274:334:private static com.threed.jpct.SimpleVector project3D2DInternal(com.threed.jpct.Camera,com.threed.jpct.FrameBuffer,com.threed.jpct.SimpleVector,com.threed.jpct.Matrix,com.threed.jpct.SimpleVector)
+com.threed.jpct.Light:
+    public static final boolean LIGHT_VISIBLE
+    public static final boolean LIGHT_INVISIBLE
+    53:55:public void disable()
+    63:63:public boolean isEnabled()
+    74:75:public void setIntensity(com.threed.jpct.SimpleVector)
+    98:98:public com.threed.jpct.SimpleVector getIntensity()
+    109:110:public void setAttenuation(float)
+    118:118:public float getAttenuation()
+    130:134:public void setDiscardDistance(float)
+    144:144:public float getDiscardDistance()
+    157:161:public void setDistanceOverride(float)
+    171:171:public float getDistanceOverride()
+    190:190:public com.threed.jpct.SimpleVector getPosition()
+    203:203:public com.threed.jpct.SimpleVector getPosition(com.threed.jpct.SimpleVector)
+    219:226:public void rotate(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+com.threed.jpct.Lights:
+    private static final long serialVersionUID
+    private static final java.lang.String ERROR_MESSAGE
+    87:92:void setRGBScale(int)
+    102:105:float getDiscardDistance(int)
+    109:115:com.threed.jpct.SimpleVector getPosition(int,com.threed.jpct.SimpleVector)
+    119:122:com.threed.jpct.SimpleVector getIntensity(int)
+    126:135:void setAttenuation(int,float)
+    138:144:void setDiscardDistance(int,float)
+    147:150:void setDistanceOverride(int,float)
+    153:153:float getDistanceOverride(int)
+com.threed.jpct.Loader:
+    private static final int DEFAULT_BUFFER
+    private static final int MAX_CACHE_SIZE
+    28:29:private Loader()
+    44:45:public static void setVertexOptimization(boolean)
+    93:93:public static com.threed.jpct.Object3D loadSerializedObject(java.io.InputStream)
+    108:108:public static com.threed.jpct.Object3D[] loadSerializedObjectArray(java.io.InputStream)
+    165:165:public static java.lang.String[] readTextureNames3DS(java.io.InputStream)
+    185:185:public static com.threed.jpct.Object3D loadASC(java.io.InputStream,float,boolean)
+    218:218:public static com.threed.jpct.Object3D[] loadOBJ(java.io.InputStream,java.io.InputStream,float)
+    222:534:private static com.threed.jpct.Object3D[] loadOBJ(java.net.URL,java.lang.String,java.lang.String,java.io.InputStream,java.io.InputStream,float)
+    538:557:private static java.lang.String removeBogusData(java.lang.String)
+    562:754:private static com.threed.jpct.Object3D createOBJObject(java.util.HashMap,int[][][],float[][],float[][],java.lang.String,java.lang.String[],int,int,int,int,int[],int[],float[][])
+    758:767:private static int countOcc(java.lang.String,java.lang.String)
+    771:1048:private static com.threed.jpct.Object3D loadASC(java.net.URL,java.lang.String,java.io.InputStream,float,boolean)
+    1374:1508:private static java.lang.String[] readTextureNames3DS(java.net.URL,java.lang.String,java.io.InputStream)
+com.threed.jpct.Logger:
+    public static final int ERROR
+    public static final int WARNING
+    public static final int MESSAGE
+    public static final int DEBUG
+    public static final int ON_ERROR_THROW_EXCEPTION
+    public static final int ON_ERROR_EXIT
+    public static final int ON_ERROR_RESUME_NEXT
+    public static final int LL_ONLY_ERRORS
+    public static final int LL_ERRORS_AND_WARNINGS
+    public static final int LL_VERBOSE
+    public static final int LL_DEBUG
+    13:13:public Logger()
+    202:202:static java.io.Writer getWriter()
+com.threed.jpct.Logger$1
+com.threed.jpct.MathUtils
+com.threed.jpct.Matrix:
+    private static final long serialVersionUID
+    private static final float pi
+    private static final float mpi
+    private static final float pih
+    private static final float mpih
+    72:79:public Matrix(com.threed.jpct.Matrix)
+    127:128:public final void setOrientation(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    132:178:final void setOrientation(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,boolean)
+    433:480:public final void rotateZ(float)
+    555:570:public final void interpolate(com.threed.jpct.Matrix,com.threed.jpct.Matrix,float)
+    579:579:public final com.threed.jpct.SimpleVector getTranslation()
+    589:589:public final com.threed.jpct.SimpleVector getXAxis()
+    599:599:public final com.threed.jpct.SimpleVector getYAxis()
+    623:624:public final com.threed.jpct.SimpleVector getXAxis(com.threed.jpct.SimpleVector)
+    637:638:public final com.threed.jpct.SimpleVector getYAxis(com.threed.jpct.SimpleVector)
+    652:653:public final com.threed.jpct.SimpleVector getZAxis(com.threed.jpct.SimpleVector)
+    666:669:public final float get(int,int)
+    679:682:public final void translate(com.threed.jpct.SimpleVector)
+    719:719:public final com.threed.jpct.Matrix invert()
+    909:909:public final float[] getDump()
+    1025:1028:public final void set(int,int,float)
+    1045:1051:public final void setRow(int,float,float,float,float)
+    1068:1074:public final void setColumn(int,float,float,float,float)
+    1117:1134:public final com.threed.jpct.Matrix transpose()
+com.threed.jpct.Mesh:
+    private static final long serialVersionUID
+    public static final boolean COMPRESS
+    public static final boolean DONT_COMPRESS
+    public static final int SERIALIZE_ALL
+    public static final int SERIALIZE_VERTICES_ONLY
+    public static final int SERIALIZE_LOW_PRECISION
+    transient int[] nxiOrg
+    transient int[] nyiOrg
+    transient int[] nziOrg
+    156:163:public boolean setVertexController(com.threed.jpct.IVertexController,boolean)
+    184:188:public void removeVertexController()
+    197:202:public void strip()
+    213:214:public void setLocked(boolean)
+    222:222:public boolean isLocked()
+    375:375:public int getVertexCount()
+    387:387:public int getUniqueVertexCount()
+    396:396:public int getTriangleCount()
+    407:407:public float[] getBoundingBox()
+    411:416:void translateMesh(com.threed.jpct.Matrix,com.threed.jpct.Matrix)
+    420:480:final float getLargestCoveredDistance()
+    989:990:public void setSerializeMethod(int)
+    994:1018:private void readObject(java.io.ObjectInputStream)
+    1023:1057:private void writeObject(java.io.ObjectOutputStream)
+    1060:1066:private short[] floatToShort(float[])
+    1070:1076:private float[] shortToFloat(short[])
+com.threed.jpct.NPOTTexture
+com.threed.jpct.Object3D:
+    private static final long serialVersionUID
+    public static final boolean ENVMAP_ENABLED
+    public static final boolean ENVMAP_DISABLED
+    public static final int TRANSPARENCY_MODE_DEFAULT
+    public static final int TRANSPARENCY_MODE_ADD
+    public static final boolean BILLBOARDING_ENABLED
+    public static final boolean BILLBOARDING_DISABLED
+    public static final boolean CULLING_ENABLED
+    public static final boolean CULLING_DISABLED
+    public static final boolean SPECULAR_ENABLED
+    public static final boolean SPECULAR_DISABLED
+    public static final boolean OBJ_VISIBLE
+    public static final boolean OBJ_INVISIBLE
+    public static final int COLLISION_CHECK_NONE
+    public static final int COLLISION_CHECK_OTHERS
+    public static final int COLLISION_CHECK_SELF
+    public static final float COLLISION_NONE
+    public static final float RAY_MISSES_BOX
+    public static final boolean COLLISION_DETECTION_OPTIMIZED
+    public static final boolean COLLISION_DETECTION_NOT_OPTIMIZED
+    public static final int SHADING_GOURAUD
+    public static final int SHADING_FAKED_FLAT
+    public static final int LIGHTING_ALL_ENABLED
+    public static final int LIGHTING_NO_LIGHTS
+    public static final int ELLIPSOID_ALIGNED
+    public static final int ELLIPSOID_TRANSFORMED
+    public static final int UNKNOWN_OBJECTSIZE
+    public static final int NO_OBJECT
+    private static final float INSIDE_POLYGON_CONST
+    private static final float EPSILON
+    393:411:private void createCollisionArrays()
+    439:440:public void setVirtualizer(com.threed.jpct.Virtualizer)
+    448:448:public com.threed.jpct.Virtualizer getVirtualizer()
+    481:482:public void setSortOffset(float)
+    521:542:public static com.threed.jpct.Object3D mergeAll(com.threed.jpct.Object3D[])
+    556:557:public static void resetNextID()
+    567:567:public static int getNextID()
+    580:585:public static void setNextID(int)
+    603:663:public Object3D(float[],float[],int[],int)
+    690:691:public Object3D(com.threed.jpct.Object3D)
+    705:715:public Object3D(com.threed.jpct.Object3D,boolean)
+    718:823:private void copy(com.threed.jpct.Object3D,boolean)
+    910:911:public void compile(boolean)
+    957:979:public void shareCompiledData(com.threed.jpct.Object3D)
+    1002:1008:public void strip()
+    1022:1023:public void forceGeometryIndices(boolean)
+    1068:1069:public void clearAnimation()
+    1110:1111:public void animate(float)
+    1131:1146:public void setCollisionMode(int)
+    1163:1167:public void setCollisionOptimization(boolean)
+    1302:1306:public boolean hasChild(com.threed.jpct.Object3D)
+    1321:1332:public boolean hasParent(com.threed.jpct.Object3D)
+    1350:1355:public void addChild(com.threed.jpct.Object3D)
+    1367:1372:public void removeChild(com.threed.jpct.Object3D)
+    1384:1404:public void removeParent(com.threed.jpct.Object3D)
+    1418:1432:public void addParent(com.threed.jpct.Object3D)
+    1440:1444:public com.threed.jpct.Object3D[] getParents()
+    1501:1501:public boolean wasVisible()
+    1529:1529:public boolean getCulling()
+    1545:1549:public void setShadingMode(int)
+    1561:1567:public void setLighting(int)
+    1576:1579:public int getLighting()
+    1591:1592:public void setMaxLights(int)
+    1601:1601:public int getMaxLights()
+    1652:1653:public void setShader(com.threed.jpct.GLSLShader)
+    1662:1662:public com.threed.jpct.GLSLShader getShader()
+    1681:1682:public void calcTangentVectors()
+    1689:1690:public void clearShader()
+    1698:1701:public int getTransparency()
+    1710:1710:public boolean isTransparent()
+    1733:1733:public int getTransparencyMode()
+    1761:1774:public void setAdditionalColor(com.threed.jpct.RGBColor)
+    1790:1794:public void clearAdditionalColor()
+    1823:1825:public void decoupleMesh()
+    1837:1838:public void setBillboarding(boolean)
+    1849:1849:public boolean isEnvmapped()
+    1864:1865:public void setEnvmapped(boolean)
+    1876:1877:public void setFixedPointMode(boolean)
+    1902:1903:public void rotateY(float)
+    1915:1916:public void rotateZ(float)
+    1943:1949:public void translateMesh()
+    1961:1962:public void translate(com.threed.jpct.SimpleVector)
+    1981:1982:public void translate(float,float,float)
+    1998:2002:public void align(com.threed.jpct.Camera)
+    2015:2019:public void align(com.threed.jpct.Object3D)
+    2032:2036:public void setOrientation(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    2074:2085:public void disableLazyTransformations()
+    2100:2106:public void scale(float)
+    2119:2128:public void setScale(float)
+    2146:2146:public com.threed.jpct.SimpleVector getTranslation()
+    2160:2164:public com.threed.jpct.SimpleVector getTranslation(com.threed.jpct.SimpleVector)
+    2173:2173:public com.threed.jpct.SimpleVector getOrigin()
+    2184:2186:public com.threed.jpct.SimpleVector getXAxis()
+    2197:2199:public com.threed.jpct.SimpleVector getYAxis()
+    2210:2212:public com.threed.jpct.SimpleVector getZAxis()
+    2230:2230:public com.threed.jpct.Matrix getTranslationMatrix()
+    2249:2249:public com.threed.jpct.Matrix getOriginMatrix()
+    2260:2268:public int getLightCount()
+    2292:2294:public void clearRotation()
+    2301:2302:public void clearTranslation()
+    2314:2315:public void setTextureMatrix(com.threed.jpct.Matrix)
+    2323:2323:public com.threed.jpct.Matrix getTextureMatrix()
+    2354:2355:public void setTranslationMatrix(com.threed.jpct.Matrix)
+    2368:2372:public void setMesh(com.threed.jpct.Mesh)
+    2466:2466:public com.threed.jpct.Object3D cloneObject()
+    2471:2522:void enlarge(int)
+    2535:2582:public com.threed.jpct.Matrix getWorldTransformation()
+    2670:2675:public synchronized void addCollisionListener(com.threed.jpct.CollisionListener)
+    2684:2691:public synchronized void removeCollisionListener(com.threed.jpct.CollisionListener)
+    2698:2699:public void disableCollisionListeners()
+    2705:2706:public void enableCollisionListeners()
+    2715:2718:public java.util.Iterator getCollisionListeners()
+    2731:2732:public void setRenderHook(com.threed.jpct.IRenderHook)
+    2740:2740:public com.threed.jpct.IRenderHook getRenderHook()
+    2763:2764:public int checkForCollision(com.threed.jpct.SimpleVector,float)
+    2788:2789:public com.threed.jpct.SimpleVector checkForCollisionSpherical(com.threed.jpct.SimpleVector,float)
+    2816:2820:public com.threed.jpct.SimpleVector checkForCollisionEllipsoid(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,int)
+    2824:2827:private void checkWorld()
+    2842:2843:public void setEllipsoidMode(int)
+    2853:2853:public int getEllipsoidMode()
+    2869:2869:public boolean wasTargetOfLastCollision()
+    2881:2882:public void resetCollisionStatus()
+    2899:2921:public float calcMinDistance(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    2946:2946:public float calcMinDistance(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float)
+    2954:2979:float calcMinDistance(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float,boolean)
+    3019:3019:public com.threed.jpct.SimpleVector getTransformedCenter()
+    3032:3036:public com.threed.jpct.SimpleVector getTransformedCenter(com.threed.jpct.SimpleVector)
+    3066:3066:public com.threed.jpct.SimpleVector getRotationPivot()
+    3107:3108:public void setOcTree(com.threed.jpct.OcTree)
+    3150:3152:public void setOrigin(com.threed.jpct.SimpleVector)
+    3163:3186:public void invert()
+    3196:3197:public void invertCulling(boolean)
+    3206:3206:public boolean cullingIsInverted()
+    3234:3314:public void calcTextureWrap()
+    3330:3412:public void calcTextureWrapSpherical()
+    3450:3512:public void setTexture(com.threed.jpct.TextureInfo)
+    3526:3529:public void shareTextureData(com.threed.jpct.Object3D)
+    3551:3551:public float rayIntersectsAABB(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,boolean)
+    3571:3571:public float rayIntersectsAABB(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    3575:3575:float rayIntersectsAABB(float[],float[])
+    3579:3579:float rayIntersectsAABB(float[],float[],boolean)
+    3583:3718:final float rayIntersectsAABB(float,float,float,float,float,float,boolean)
+    3740:3833:public boolean ellipsoidIntersectsAABB(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    3853:3853:public boolean sphereIntersectsAABB(com.threed.jpct.SimpleVector,float)
+    3858:3925:final boolean sphereIntersectsAABB(float[],float)
+    3932:3932:final float collide(float[],float[],float,float)
+    3938:4119:private final float collide(float[],float[],float,float,boolean)
+    4123:4420:final float[] collideSpherical(float[],float,float,boolean[],boolean)
+    4425:5057:final void collideEllipsoid(com.threed.jpct.CollisionInfo,float)
+    5061:5065:private float getSquaredDistance(com.threed.jpct.SimpleVector,float,float,float)
+    5071:5116:private final boolean checkPointInTriangle(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float,float,float,float,float,float,float,float,float)
+    5120:5145:private final boolean getLowestRoot(float,float,float,float,float[])
+    5149:5174:final com.threed.jpct.SimpleVector reverseTransform(com.threed.jpct.Matrix,com.threed.jpct.SimpleVector,boolean)
+    5196:5196:public int addTriangle(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    5200:5200:final int addTriangle(float,float,float,float,float,float,float,float,float)
+    5232:5232:public int addTriangle(com.threed.jpct.SimpleVector,float,float,com.threed.jpct.SimpleVector,float,float,com.threed.jpct.SimpleVector,float,float)
+    5236:5236:final int addTriangle(float,float,float,float,float,float,float,float,float,float,float,float,float,float,float)
+    5271:5271:public int addTriangle(com.threed.jpct.SimpleVector,float,float,com.threed.jpct.SimpleVector,float,float,com.threed.jpct.SimpleVector,float,float,int)
+    5311:5311:public int addTriangle(com.threed.jpct.SimpleVector,float,float,com.threed.jpct.SimpleVector,float,float,com.threed.jpct.SimpleVector,float,float,int,int)
+    5337:5337:public int addTriangle(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.TextureInfo)
+    6064:6064:boolean getLazyTransformationState()
+    6069:6085:public com.threed.jpct.Matrix getInverseWorldTransformation()
+    6089:6112:public com.threed.jpct.Matrix getInverseWorldTransformation(com.threed.jpct.Matrix)
+    6279:6280:void notifyCollisionListeners(int,int,com.threed.jpct.Object3D[],com.threed.jpct.SimpleVector)
+    6283:6297:void notifyCollisionListeners(com.threed.jpct.Object3D,int,int,com.threed.jpct.Object3D[],com.threed.jpct.SimpleVector)
+    6360:6362:void resetPolygonIDCount()
+    6372:6394:private void addPolygonID(int)
+com.threed.jpct.Object3DCompiler:
+    private static final long serialVersionUID
+com.threed.jpct.Object3DList:
+    private static final long serialVersionUID
+    24:27:Object3DList(int)
+    34:42:void clear()
+    45:47:com.threed.jpct.Object3D[] toArray()
+    99:99:java.util.Enumeration elements()
+    18:18:static synthetic int access$0(com.threed.jpct.Object3DList)
+    14:14:static synthetic com.threed.jpct.Object3D[] access$1(com.threed.jpct.Object3DList)
+com.threed.jpct.Object3DList$1
+com.threed.jpct.OcTree:
+    private static final long serialVersionUID
+    public static final int MODE_NORMAL
+    public static final int MODE_OPTIMIZED
+    public static final boolean COLLISION_USE
+    public static final boolean COLLISION_DONT_USE
+    public static final boolean RENDERING_USE
+    public static final boolean RENDERING_DONT_USE
+    private float radiusMul
+    private com.threed.jpct.Mesh objMesh
+    private com.threed.jpct.OcTreeNode[] threadsBuffer
+    private java.util.HashSet used
+    private java.lang.Object[] objArray
+    int leafs
+    int nodes
+    int[] tris
+    int maxPoly
+    int maxDepth
+    int totalPolys
+    boolean useForCollision
+    int mode
+    115:117:public OcTree(com.threed.jpct.Mesh,int,int)
+    139:141:public OcTree(com.threed.jpct.Mesh,int,int,int)
+    162:164:public OcTree(com.threed.jpct.Object3D,int,int)
+    186:188:public OcTree(com.threed.jpct.Object3D,int,int,int)
+    190:192:public OcTree()
+    195:198:void postConstruct()
+    201:213:private void initOcTree(com.threed.jpct.Mesh,int,int,int)
+    242:243:public void setCollisionUse(boolean)
+    256:257:public void setRenderingUse(boolean)
+    267:267:public boolean getCollisionUse()
+    294:297:public void setRadiusMultiplier(float)
+    305:305:public float getRadiusMultiplier()
+    316:316:public boolean isOfOrderZero()
+    333:341:java.util.List getAffectedLeafs(float,float,float,float)
+    353:354:java.lang.Object[] getColliderLeafs(float,float,float,float)
+    358:358:int getLeafCount()
+    362:362:int getTotalLeafs()
+    366:366:int getTotalPolyCount()
+    370:370:boolean isCompletelyVisible(int)
+    379:420:private java.lang.Object[] getColliderLeafs(com.threed.jpct.OcTreeNode,float,float,float,float,int[],com.threed.jpct.OcTreeNode[])
+    473:655:private boolean createChildren(com.threed.jpct.OcTreeNode,int)
+    659:670:private void buildTree()
+com.threed.jpct.OcTreeNode:
+    private static final long serialVersionUID
+    float xLow
+    float yLow
+    float zLow
+    float xHigh
+    float yHigh
+    float zHigh
+    51:51:boolean isLeaf()
+    155:174:void addTriangle(int,int,int,int,int)
+    177:182:void packPoints()
+    185:190:private boolean notInList(int[],int,int)
+    194:195:static void resetNodeID()
+    202:210:void addChild(com.threed.jpct.OcTreeNode)
+    213:226:void removeChild(com.threed.jpct.OcTreeNode)
+    229:230:void setParent(com.threed.jpct.OcTreeNode)
+    233:233:com.threed.jpct.OcTreeNode getParent()
+    249:249:int getPointCount()
+    257:257:int[] getPoints()
+    261:268:boolean completeFit(float,float,float,float,float,float,float,float,float)
+    272:281:boolean partialFit(float,float,float,float,float,float,float,float,float)
+    285:285:boolean sphereIntersectsNode(float,float,float,float)
+    289:355:void extendDimensions(float,float,float,float,float,float,float,float,float)
+    358:396:void setDimensions(float,float,float,float,float,float)
+com.threed.jpct.Plane:
+    private static final long serialVersionUID
+    32:34:public Plane(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    45:47:public void setTo(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    59:61:public Plane(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    74:75:public void setTo(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector)
+    78:99:public void setTo(float,float,float,float,float,float,float,float,float)
+    110:110:public boolean isFrontFacingTo(com.threed.jpct.SimpleVector)
+    114:114:public boolean isFrontFacingTo(float,float,float)
+    125:125:public float distanceTo(com.threed.jpct.SimpleVector)
+com.threed.jpct.PolygonManager:
+    52:68:public int[] getPolygonTextures(int)
+    83:91:public void setPolygonTexture(int,int)
+    106:186:public void addTexture(int,int,int)
+    292:308:public void setVertexAlpha(int,int,float)
+    320:335:public com.threed.jpct.SimpleVector getTransformedVertex(int,int)
+    349:359:public com.threed.jpct.SimpleVector getTextureUV(int,int)
+    370:422:public com.threed.jpct.SimpleVector getTransformedNormal(int)
+    431:431:public int getMaxPolygonID()
+com.threed.jpct.Polyline:
+    private static final long serialVersionUID
+    private int maxLength
+    private float[] buffer
+    34:47:public Polyline(com.threed.jpct.SimpleVector[],com.threed.jpct.RGBColor)
+    54:68:public void update(com.threed.jpct.SimpleVector[])
+    90:91:public void setColor(com.threed.jpct.RGBColor)
+    113:114:public void setWidth(float)
+    133:134:public void setTransparencyMode(int)
+    151:157:public void setPercentage(float)
+    164:164:public float getPercentage()
+    172:173:public void setVisible(boolean)
+com.threed.jpct.Primitives
+com.threed.jpct.RGBColor:
+    private static final long serialVersionUID
+    private static final float COLOR_INV
+    71:80:public void setTo(int,int,int,int)
+    142:142:public int getAlpha()
+    150:150:public int getRGB()
+    158:158:public int getARGB()
+com.threed.jpct.ShaderLocator:
+    38:41:public ShaderLocator(android.content.res.AssetManager)
+    43:47:public ShaderLocator(android.content.res.Resources,int)
+com.threed.jpct.SimpleVector:
+    private static final long serialVersionUID
+    82:86:public SimpleVector(double,double,double)
+    94:98:public SimpleVector(com.threed.jpct.SimpleVector)
+    116:127:public SimpleVector(float[])
+    152:152:public static com.threed.jpct.SimpleVector create(com.threed.jpct.SimpleVector)
+    212:220:public float[] toArray()
+    270:295:public com.threed.jpct.SimpleVector rotate(com.threed.jpct.SimpleVector)
+    308:315:public void rotate(com.threed.jpct.Matrix)
+    325:329:public com.threed.jpct.SimpleVector reflect(com.threed.jpct.SimpleVector)
+    340:348:public void rotateX(float)
+    358:366:public void rotateY(float)
+    376:384:public void rotateZ(float)
+    434:434:public float length()
+    476:476:public com.threed.jpct.SimpleVector calcSub(com.threed.jpct.SimpleVector)
+    487:487:public com.threed.jpct.SimpleVector calcAdd(com.threed.jpct.SimpleVector)
+    497:497:public float distance(com.threed.jpct.SimpleVector)
+    516:516:public float calcAngleFast(com.threed.jpct.SimpleVector)
+    527:527:public float calcAngle(com.threed.jpct.SimpleVector)
+    531:544:private float _calcAngle(com.threed.jpct.SimpleVector)
+    548:548:private float acosFast(float)
+    600:603:void add(float,float,float)
+    626:635:public void makeEqualLength(com.threed.jpct.SimpleVector)
+    644:644:public com.threed.jpct.Matrix getRotationMatrix()
+    656:656:public com.threed.jpct.Matrix getRotationMatrix(com.threed.jpct.SimpleVector)
+    670:670:public com.threed.jpct.Matrix getRotationMatrix(com.threed.jpct.Matrix)
+    686:756:public com.threed.jpct.Matrix getRotationMatrix(com.threed.jpct.Matrix,com.threed.jpct.SimpleVector)
+com.threed.jpct.SimpleVector$CacheableSimpleVector:
+    private static final long serialVersionUID
+com.threed.jpct.Texture:
+    private static final long serialVersionUID
+    public static final int DEFAULT_WIDTH
+    public static final int DEFAULT_HEIGHT
+    137:140:public Texture(java.io.InputStream)
+    160:163:public Texture(java.io.InputStream,boolean)
+    177:180:public Texture(android.graphics.Bitmap)
+    215:216:public Texture(android.graphics.drawable.Drawable)
+    246:247:public Texture(int,int)
+    262:269:public Texture(int,int,int)
+    282:286:public Texture(int,int,com.threed.jpct.RGBColor)
+    289:293:Texture(int,int,com.threed.jpct.RGBColor,boolean)
+    296:320:private static int[] createIntArray(int,int,com.threed.jpct.RGBColor,boolean)
+    333:362:public void add(com.threed.jpct.Texture,float)
+    402:412:public void setEffect(com.threed.jpct.ITextureEffect)
+    418:420:public void removeEffect()
+    427:438:public void applyEffect()
+    448:449:public void setEnabled(boolean)
+    458:458:public boolean isEnabled()
+    471:473:public void enable4bpp(boolean)
+    484:485:public static void defaultTo4bpp(boolean)
+    494:495:public static void defaultToKeepPixels(boolean)
+    505:506:public static void defaultToMipmapping(boolean)
+    517:519:public void setTextureCompression(boolean)
+    528:543:public void compress()
+    551:554:public int getArraySize()
+    584:586:public void enableClamping()
+    594:596:public void setClamping(boolean)
+    627:633:public void removeAlpha()
+    643:644:public void keepPixelData(boolean)
+    654:658:public void setAsShadowMap(boolean)
+    673:682:public void setDepthBuffer(com.threed.jpct.DepthBuffer)
+    685:685:public com.threed.jpct.DepthBuffer getDepthBuffer()
+    771:772:private void loadTexture(java.io.InputStream,android.graphics.Bitmap)
+    873:879:private int clip(int)
+com.threed.jpct.TextureInfo:
+    private static final int MODE_BASE
+    public static final int MODE_MODULATE
+    public static final int MODE_ADD
+    public static final int MODE_REPLACE
+    public static final int MODE_BLEND
+    public static final int MAX_PHYSICAL_TEXTURE_STAGES
+    85:87:public TextureInfo(int)
+    99:100:public void add(int,int)
+    114:115:public void set(int,int,int)
+com.threed.jpct.TextureManager:
+    public static final int TEXTURE_NOTFOUND
+    static final java.lang.String DUMMY_NAME
+    67:76:public java.util.List getState()
+    88:101:public void setState(java.util.List)
+    143:143:com.threed.jpct.Texture[] getTextures()
+    158:164:public void replaceTexture(java.lang.String,com.threed.jpct.Texture)
+    173:183:public long getMemoryUsage()
+    201:204:public void unloadTexture(com.threed.jpct.FrameBuffer,com.threed.jpct.Texture)
+    225:235:public synchronized void removeTexture(java.lang.String)
+    249:251:public void removeAndUnload(java.lang.String,com.threed.jpct.FrameBuffer)
+    271:276:public void compress()
+    290:306:public void preWarm(com.threed.jpct.FrameBuffer)
+    316:322:public void setDummyTexture(com.threed.jpct.Texture)
+    330:330:public com.threed.jpct.Texture getDummyTexture()
+    351:351:public int getTextureCount()
+    413:413:public java.util.HashSet getNames()
+    447:448:public void setVirtualizer(com.threed.jpct.Virtualizer)
+    471:479:public void virtualize(com.threed.jpct.Texture)
+com.threed.jpct.Vectors:
+    private static final long serialVersionUID
+    52:58:void createAlpha()
+    61:63:void killMultiCoords()
+    93:94:void setMesh(com.threed.jpct.Mesh)
+com.threed.jpct.Virtualizer:
+    66:68:public Virtualizer(int)
+    74:76:public Virtualizer()
+    85:91:public void setContext(android.content.Context)
+    98:105:public void cleanUp()
+    174:221:boolean store(com.threed.jpct.Texture)
+    591:596:java.io.OutputStream getOutputCacheStream(java.lang.String)
+    601:606:java.io.InputStream getInputCacheStream(java.lang.String)
+    611:613:boolean isVirtual(com.threed.jpct.Texture)
+    617:618:boolean isCached(java.lang.String)
+com.threed.jpct.VisList:
+    private static final long serialVersionUID
+com.threed.jpct.VisListManager:
+    private static final long serialVersionUID
+com.threed.jpct.World:
+    private static final long serialVersionUID
+    public static final int FOGGING_DISABLED
+    public static final int FOGGING_ENABLED
+    static final int RGB_SCALE_DEFAULT
+    static final int RGB_SCALE_2X
+    static final int RGB_SCALE_4X
+    150:151:void setRGBScale(int)
+    154:154:com.threed.jpct.Lights getLights()
+    163:163:public int getSize()
+    180:181:public void newCamera()
+    206:208:public void setClippingPlanes(float,float)
+    233:250:public void removeObject(int)
+    281:288:public com.threed.jpct.Object3D getObject(int)
+    301:301:public com.threed.jpct.Object3D getObjectByName(java.lang.String)
+    347:350:public void addObjects(com.threed.jpct.Object3D[])
+    357:357:int addLight(com.threed.jpct.SimpleVector,com.threed.jpct.RGBColor)
+    369:370:void setLightDiscardDistance(int,float)
+    373:374:void setLightAttenuation(int,float)
+    381:381:float getLightAttenuation(int)
+    385:385:float getLightDiscardDistance(int)
+    389:390:void setLightDistanceOverride(int,float)
+    393:393:float getLightDistanceOverride(int)
+    397:397:com.threed.jpct.SimpleVector getLightPosition(int,com.threed.jpct.SimpleVector)
+    401:401:com.threed.jpct.SimpleVector getLightIntensity(int)
+    428:428:public int[] getAmbientLight()
+    447:453:public void setFogging(int)
+    463:466:public int getFogging()
+    483:484:public void setFogParameters(float,float,float,float)
+    502:513:public void setFogParameters(float,float,float,float,float)
+    536:541:public int checkCollision(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float)
+    565:565:public com.threed.jpct.SimpleVector checkCollisionSpherical(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float)
+    593:596:public com.threed.jpct.SimpleVector checkCollisionEllipsoid(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,int)
+    618:618:public boolean checkCameraCollision(int,float)
+    644:644:public boolean checkCameraCollision(int,float,boolean)
+    673:673:public boolean checkCameraCollision(int,float,float,boolean)
+    697:697:public boolean checkCameraCollision(com.threed.jpct.SimpleVector,float,float,boolean)
+    727:756:public java.lang.Object[] calcMinDistanceAndObject3D(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float)
+    782:811:public float calcMinDistance(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float)
+    843:843:public boolean checkCameraCollisionSpherical(int,float,float,boolean)
+    867:867:public boolean checkCameraCollisionSpherical(com.threed.jpct.SimpleVector,float,float,boolean)
+    896:899:public boolean checkCameraCollisionEllipsoid(int,com.threed.jpct.SimpleVector,float,int)
+    921:924:public boolean checkCameraCollisionEllipsoid(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,float,int)
+    933:937:public void buildAllObjects()
+    1103:1104:public void drawWireframe(com.threed.jpct.FrameBuffer,com.threed.jpct.RGBColor)
+    1113:1113:public long getFrameCounter()
+    1122:1127:public java.util.Enumeration getObjects()
+    1137:1140:public void setObjectsVisibility(boolean)
+    1146:1148:public void removeAll()
+    1155:1166:public void removeAllObjects()
+    1173:1174:public void removeAllLights()
+    1186:1190:public void addPolyline(com.threed.jpct.Polyline)
+    1199:1203:public void removePolyline(com.threed.jpct.Polyline)
+    1218:1219:public static synchronized void setDefaultThread(java.lang.Thread)
+    1227:1227:public static synchronized java.lang.Thread getDefaultThread()
+    1247:1247:public com.threed.jpct.GLSLShader getGlobalShader()
+    1261:1273:final com.threed.jpct.SimpleVector checkObjCollisionSpherical(com.threed.jpct.Object3D,com.threed.jpct.SimpleVector,float)
+    1278:1286:final com.threed.jpct.SimpleVector checkObjCollisionEllipsoid(com.threed.jpct.Object3D,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,int)
+    1291:1309:final int checkObjCollision(com.threed.jpct.Object3D,com.threed.jpct.SimpleVector,float)
+    1370:1566:private final boolean checkCameraCollision(com.threed.jpct.SimpleVector,int,float,float,boolean)
+    1572:1622:private final int checkSomeCollision(float[],float[],float,com.threed.jpct.Object3D)
+    1627:1664:private final com.threed.jpct.SimpleVector checkSomeCollisionSpherical(float[],float[],float,com.threed.jpct.Object3D)
+    1669:1723:private final boolean checkCameraCollisionSpherical(com.threed.jpct.SimpleVector,int,float,float,boolean)
+    1727:1753:private final com.threed.jpct.SimpleVector checkSomeCollisionEllipsoid(com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.SimpleVector,com.threed.jpct.Object3D,int)
+    1758:1808:private final boolean checkCameraCollisionEllipsoid(com.threed.jpct.SimpleVector,int,com.threed.jpct.SimpleVector,float,int)
+    1813:1948:private final void doWorldCollisionEllipsoid(com.threed.jpct.CollisionInfo,int,com.threed.jpct.Object3D,int)
+    1958:1961:private void notifyAll(com.threed.jpct.Object3D,com.threed.jpct.CollisionInfo,int,float[])
+    1964:1964:private boolean hasToNotify(com.threed.jpct.CollisionInfo)
+    1968:1993:private void notifyAll(com.threed.jpct.Object3D,com.threed.jpct.CollisionInfo,int,com.threed.jpct.SimpleVector)
+com.threed.jpct.ZipHelper:
+    14:14:ZipHelper()
+    46:61:public static byte[] zip(int[])
+    65:75:public static byte[] intToByteArray(int[])
+com.threed.jpct.util.AAConfigChooser
+com.threed.jpct.util.BitmapHelper:
+    17:17:public BitmapHelper()
+    70:72:public static android.graphics.Bitmap rescale(android.graphics.Bitmap,int,int)
+com.threed.jpct.util.LensFlare
+com.threed.jpct.util.MemoryHelper
+com.threed.jpct.util.NVDepthConfigChooser
+com.threed.jpct.util.Overlay:
+    private static final long serialVersionUID
+    49:50:public Overlay(com.threed.jpct.World,com.threed.jpct.FrameBuffer,java.lang.String)
+    70:71:public Overlay(com.threed.jpct.World,int,int,int,int,java.lang.String)
+    93:112:public Overlay(com.threed.jpct.World,int,int,int,int,java.lang.String,boolean)
+    127:131:public void setDepth(float)
+    143:144:public void setTransparency(int)
+    155:156:public void setColor(com.threed.jpct.RGBColor)
+    165:166:public void setTexture(java.lang.String)
+    175:176:public void setTexture(com.threed.jpct.TextureInfo)
+    186:187:public void setVisibility(boolean)
+    199:200:public void setTransparencyMode(int)
+    215:219:public void setNewCoordinates(int,int,int,int)
+    236:241:public void setSourceCoordinates(int,int,int,int)
+    250:254:public void setRotation(float)
+    265:267:public void setRotationPivot(int,int)
+    276:276:public com.threed.jpct.Object3D getObject3D()
+    299:300:public void unlink()
+com.threed.jpct.util.Overlay$MyController:
+    private static final long serialVersionUID
+    384:384:private Overlay$MyController()
+    384:384:synthetic Overlay$MyController(com.threed.jpct.util.Overlay$MyController)
+com.threed.jpct.util.SkyBox

@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.10+'
+    }
+}
+
+allprojects {
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+
+    version = '1.0'
+    ext {
+        appName = 'iOS8'
+        gdxVersion = '1.0.1'
+        roboVMVersion = '0.0.12'
+        tweenVersion = '6.3.3'
+        ini4jVersion = '0.5.2'
+    }
+
+    repositories {
+        maven { url "https://github.com/suyu0925/maven-libgdx/raw/mvn-repo/" }
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+project(":desktop") {
+    apply plugin: "java"
+
+
+    dependencies {
+        compile project(":core")
+        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    }
+}
+
+project(":android") {
+    apply plugin: "android"
+
+    configurations { natives }
+
+    dependencies {
+        compile project(":core")
+        compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+        natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+        compile "aurelienribon.tweenengine:tweenengine:$tweenVersion"
+        compile "org.ini4j:ini4j:$ini4jVersion"
+    }
+}
+
+project(":core") {
+    apply plugin: "java"
+
+
+    dependencies {
+        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        compile "aurelienribon.tweenengine:tweenengine:$tweenVersion"
+        compile "org.ini4j:ini4j:$ini4jVersion"
+    }
+}
+
+tasks.eclipse.doLast {
+    delete ".project"
+}

@@ -1,0 +1,78 @@
+<resources>
+
+    <string name="app_name">水波动态壁纸</string>
+    
+    <string name="author">酷易</string>
+    <string name="title">水波动态壁纸</string>
+    <string name="description">轻轻触碰壁纸，感受涟漪之美。</string>
+    
+    <string name="preferences">漣漪設置</string>
+    <string name="preferences_customWallpaper">自定義背景</string>
+    <string name="preferences_sysWallpaper">系統背景</string>
+    <string name="preferences_defWallpaper">默認背景</string>
+    <string name="preferences_customWallpaper_summary">用你的照片做背景</string>
+    <string name="preferences_sysWallpaper_summary">用手机的默认壁纸做背景</string>
+    <string name="preferences_defWallpaper_summary">用默認背景</string>
+    
+    <string name="preferences_frequency">隨機頻率</string>
+		<string-array name="preferences_frequency">  
+	    <item>@string/close</item>
+        <item>@string/fase</item>  
+        <item>@string/normal</item>  
+        <item>@string/slow</item>  
+    </string-array>
+    <string-array name="preferences_frequency_list_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+	<string name="preferences_range">水波大小</string>
+    <string-array name="preferences_range">
+        <item>@string/big</item>
+        <item>@string/normal</item>
+        <item>@string/small</item>
+    </string-array>
+    <string-array name="preferences_range_list_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string name="fase">快</string>
+    <string name="slow">慢</string>
+    
+    <string name="close">關閉</string>
+    <string name="normal">正常</string>
+    
+    <string name="big">大</string>
+    <string name="small">小</string>
+    
+    <string name="failed">未能獲得圖片</string>
+    
+    <string name="scrollbackgroundtitle">水平滾動</string>
+    <string name="scrollbackgroundsummarye">背景跟隨主屏幕滾動</string>
+ 
+    <string name="currSettings">當前設置：</string>
+    
+    <string name="button1_text">設置</string>
+    <string name="button2_text">下一步</string>
+    <string name="thanks_message">谢谢你安装水波动态壁纸.</string>
+    <string name="next_message">按\"下一步\"来设置壁纸.</string>
+    <string name="setting_message">按\"设置\"来自定义壁纸.</string>
+    
+    <string name="customization">自定义</string>
+    <string name="social">社交</string>
+    <string name="information">信息</string>
+    <string name="rate">为壁纸评分</string>
+    <string name="rate_message">给这个壁纸评分</string>
+    <string name="share">分享</string>
+    <string name="share_message">和朋友们分享这个壁纸</string>
+    <string name="share_message_long">推荐你一个很赞的动态壁纸。在这里下载： </string>
+    <string name="designer">设计者</string>
+    <string name="designer_message">Kivvi工作室</string>
+    <string name="about">关于Kivvi工作室</string>
+    <string name="about_message">Kivvi工作室是一个专注于安卓动态壁纸的团队。</string>
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+</resources>

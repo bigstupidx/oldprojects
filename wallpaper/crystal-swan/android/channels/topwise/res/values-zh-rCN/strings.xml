@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">水晶天鹅</string>
+    
+    <string name="author">Kivvi工作室</string>
+    <string name="title">水晶天鹅</string>
+    <string name="description">非常美丽的水晶天鹅。</string>
+    
+    <string name="background_brightness">背景亮度</string>
+    <string name="check_doubleclick">双击</string>
+    <string name="check_doubleclick_summary">启用双击来切换主题</string>
+    <string name="setswan">紫色天鹅</string>
+    <string name="setswan_summary">设为\"紫色天鹅\"主题</string>
+    <string name="sethorse">冰马</string>
+    <string name="sethorse_summary">设为\"冰马\"主题</string>
+    <string name="setrabbit">雪兔</string>
+    <string name="setrabbit_summary">设为\"雪兔\"主题</string>
+    
+    <string name="button1_text">设置</string>
+    <string name="button2_text">下一步</string>
+    <string name="thanks_message">谢谢你安装水晶style动态壁纸.</string>
+    <string name="next_message">按\"下一步\"来设置壁纸.</string>
+    <string name="setting_message">按\"设置\"来自定义壁纸.</string>
+    
+    <string name="customization">自定义</string>
+    <string name="social">社交</string>
+    <string name="information">信息</string>
+    <string name="rate">为壁纸评分</string>
+    <string name="rate_message">给这个壁纸评分</string>
+    <string name="share">分享</string>
+    <string name="share_message">和朋友们分享这个壁纸</string>
+    <string name="share_message_long">推荐你一个很赞的动态壁纸。在这里下载： </string>
+    <string name="designer">设计者</string>
+    <string name="designer_message">Kivvi工作室</string>
+    <string name="about">关于Kivvi工作室</string>
+    <string name="about_message">Kivvi工作室是一个专注于安卓动态壁纸的团队。联系我们: kivvi.service@gmail.com</string>
+    
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+</resources>

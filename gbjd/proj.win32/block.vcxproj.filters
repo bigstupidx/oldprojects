@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\scene">
+      <UniqueIdentifier>{0c61c759-daa9-410b-b8a7-823a3207d0cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\layer">
+      <UniqueIdentifier>{3660526e-afb6-4d73-a016-f417f6ce5d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\actor">
+      <UniqueIdentifier>{e76026dd-e03f-4073-bc54-11599e1b75ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\foundation">
+      <UniqueIdentifier>{4f620713-4d0e-4dfc-8177-c2f06b9e3fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\walls">
+      <UniqueIdentifier>{eed54f0e-2b7c-4452-a6e2-ca0ccadd8c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\text">
+      <UniqueIdentifier>{9b91cdc6-695d-42c5-96ad-861829e06ae6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\scene\stage01scene.cpp">
+      <Filter>Classes\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\scene\stagescene.cpp">
+      <Filter>Classes\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layer\controllayer.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layer\tiledmap.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\actor\actor.cpp">
+      <Filter>Classes\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\actor\boy.cpp">
+      <Filter>Classes\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\foundation\entity.cpp">
+      <Filter>Classes\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\actor\girl.cpp">
+      <Filter>Classes\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\foundation\world.cpp">
+      <Filter>Classes\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\wall\wall.cpp">
+      <Filter>Classes\walls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\wall\walls.cpp">
+      <Filter>Classes\walls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\foundation\GLES-Render.cpp">
+      <Filter>Classes\foundation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layer\dpad.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\text\texts.cpp">
+      <Filter>Classes\text</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\scene\stage01scene.h">
+      <Filter>Classes\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\scene\stagescene.h">
+      <Filter>Classes\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\controllayer.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\tiledmap.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\actor\actor.h">
+      <Filter>Classes\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\actor\boy.h">
+      <Filter>Classes\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\foundation\entity.h">
+      <Filter>Classes\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\actor\girl.h">
+      <Filter>Classes\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\foundation\world.h">
+      <Filter>Classes\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\wall\wall.h">
+      <Filter>Classes\walls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\wall\walls.h">
+      <Filter>Classes\walls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\foundation\GLES-Render.h">
+      <Filter>Classes\foundation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\dpad.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\text\texts.h">
+      <Filter>Classes\text</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

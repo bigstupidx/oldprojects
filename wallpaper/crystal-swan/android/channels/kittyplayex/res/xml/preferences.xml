@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_name" >
+
+    <PreferenceCategory android:title="@string/customization" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="check_doubleclick"
+            android:summary="@string/check_doubleclick_summary"
+            android:title="@string/check_doubleclick" />
+
+        <SeekBarPreference
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:defaultValue="100"
+            android:key="seekBar"
+            android:max="100"
+            android:title="@string/background_brightness" >
+        </SeekBarPreference>
+        <!-- <PreferenceScreen -->
+        <!-- android:key="setswan" -->
+        <!-- android:title="@string/setswan" -->
+        <!-- android:summary="@string/setswan_summary"> -->
+        <!-- </PreferenceScreen> -->
+        <!-- <PreferenceScreen -->
+        <!-- android:key="sethorse" -->
+        <!-- android:title="@string/sethorse" -->
+        <!-- android:summary="@string/sethorse_summary"> -->
+        <!-- </PreferenceScreen> -->
+        <!-- <PreferenceScreen -->
+        <!-- android:key="setrabbit" -->
+        <!-- android:title="@string/setrabbit" -->
+        <!-- android:summary="@string/setrabbit_summary"> -->
+        <!-- </PreferenceScreen> -->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/social" >
+        <PreferenceScreen
+            android:key="rate"
+            android:summary="@string/rate_message"
+            android:title="@string/rate" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="share"
+            android:summary="@string/share_message"
+            android:title="@string/share" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/information" >
+        <com.kivvi.crystalswan.android.setting.MyDialogPreference
+            android:dialogMessage="@string/designer_message"
+            android:dialogTitle="@string/designer"
+            android:key="designer"
+            android:title="@string/designer" >
+        </com.kivvi.crystalswan.android.setting.MyDialogPreference>
+        <com.kivvi.crystalswan.android.setting.MyDialogPreference
+            android:dialogMessage="@string/about_message"
+            android:dialogTitle="@string/about"
+            android:key="about"
+            android:title="@string/about" >
+        </com.kivvi.crystalswan.android.setting.MyDialogPreference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

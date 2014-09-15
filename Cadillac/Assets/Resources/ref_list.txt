@@ -1,0 +1,17 @@
+id	CN	EN	TW
+Garage	我的车库	Garage	我的車庫
+Train	车手训练	Train	車手訓練
+Gallery	陈列馆	Gallery	陳列館
+Trainning Course	训练场	Tranning Course	訓練場
+Match	竞技场	Match	競技場
+Main Menu	主菜单	Main Menu	主菜單
+Upgrade	配件改装	Upgrade	配件改裝
+Keep Fit	车辆保养	Keep Fit	車輛保養
+Other Cars	其它车辆	Other Cars	其它車輛
+Next	去训练场	Next	去訓練場
+Engine	动力	Engine	動力
+Color	外观	Color	外觀
+Braking	制动	Braking	制動
+Lights	灯光	Lights	燈光
+Ornament	内饰	Ornament	內飾
+Intelligence	智能系统	Intelligence	智能系統

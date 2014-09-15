@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">3D Mushroom</string>
+    <string name="service_name">3D Mushroom</string>
+    <string name="author">Cooee</string>
+    <string name="description">3D Mushroom</string>
+
+</resources>

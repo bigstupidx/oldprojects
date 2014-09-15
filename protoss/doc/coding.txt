@@ -1,0 +1,36 @@
+Code checkin protocol
+
+############################
+# The structure of repo
+############################
+Three main folders in the root of repo, trunk, branch and tag.
+
+Trunk is the code base under development and always buildable. Branch is for feature development or bug fix. Tag is a snapshot of trunk every sprint.
+
+############################
+# Feature development workflow
+############################
+1. create branch (bug/func/other + task no. + yymmdd + alias + <keyword>), e.g., bug_0001_130608_hli_temp
+2. work on branch (checkout <branch-name>)
+3. code review
+ commit the changes to branch; the commit log will be task(backlog) no., task(backlog) description + solution.
+ use email to request code review
+  email title: CODEREVIEW - <branch name>
+  email body: task(backlog) no., task(backlog) description + solution.
+ review peers
+  jihao->hli, suyu->jihao, hli->suyu
+4. intergrate branch to trunk by branch author.
+
+############################
+# tag
+############################
+tagging is done every sprint. Suyu is responsible to tagging.
+tag naming scheme: tag no. + yymmdd + <keyword>
+
+
+
+
+
+
+
+

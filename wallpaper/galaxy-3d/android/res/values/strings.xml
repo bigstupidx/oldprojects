@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Galaxy 3D</string>
+    <string name="title">Galaxy 3D</string>
+    <string name="author">Kivvi Studio</string>
+    <string name="description">Outer Space: adventure, enormous distances, never ending journey!</string>
+    
+    <string name="button1_text">Setting</string>
+    <string name="button2_text">Next</string>
+    <string name="thanks_message">Thank you for installing Galaxy 3D live wallpaper. Outer Space: adventure, enormous distances, never ending journey!</string>
+    <string name="next_message">Tap \'Next\' and select \'Galaxy 3D\' from the following screen to set this wallpaper.</string>
+    <string name="setting_message">Tap \'Setting\' to customize your wallpaper.</string>
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">3D银河</string>
+    <string name="title">3D银河</string>
+    <string name="author">Kivvi Studio</string>
+    <string name="description">浩瀚的宇宙，闪烁的群星，飘浮的陨石，无尽的旅途!</string>
+    
+    <string name="button1_text">设置</string>
+    <string name="button2_text">下一步</string>
+    <string name="thanks_message">谢谢你安装3D银河动态壁纸. 浩瀚的宇宙，闪烁的群星，飘浮的陨石，无尽的旅途!</string>
+    <string name="next_message">按\"下一步\"来设置壁纸.</string>
+    <string name="setting_message">按\"设置\"来自定义壁纸.</string>
+    <string name="copyright">Copyright 2014 Kivvi Studio.</string>
+</resources>

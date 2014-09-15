@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/preferences" >
+    
+
+    <PreferenceCategory
+		android:title="@string/customization">
+	    <PreferenceScreen
+			android:key="custom_wallpaper"
+			android:title="@string/preferences_customWallpaper"
+			android:summary="@string/preferences_customWallpaper_summary">
+		</PreferenceScreen>
+	    <PreferenceScreen
+			android:key="sys_wallpaper"
+			android:title="@string/preferences_sysWallpaper"
+			android:summary="@string/preferences_sysWallpaper_summary">
+		</PreferenceScreen>
+	    <PreferenceScreen
+			android:key="def_wallpaper"
+			android:title="@string/preferences_defWallpaper"
+			android:summary="@string/preferences_defWallpaper_summary">
+		</PreferenceScreen>
+	</PreferenceCategory>
+	
+    <PreferenceCategory
+		android:title="@string/social">
+	    <PreferenceScreen
+			android:key="rate"
+			android:title="@string/rate"
+			android:summary="@string/rate_message">
+		</PreferenceScreen>
+	    <PreferenceScreen
+			android:key="share"
+			android:title="@string/share"
+			android:summary="@string/share_message">
+		</PreferenceScreen>
+	</PreferenceCategory>
+	
+    <PreferenceCategory
+		android:title="@string/information">
+	    <com.kivvi.ripples.livewallpapersettings.MyDialogPreference
+			android:key="designer"
+			android:title="@string/designer"
+			android:dialogMessage="@string/designer_message" 
+        	android:dialogTitle="@string/designer" >
+		</com.kivvi.ripples.livewallpapersettings.MyDialogPreference>
+	    <com.kivvi.ripples.livewallpapersettings.MyDialogPreference
+			android:key="about"
+			android:title="@string/about"
+			android:dialogMessage="@string/about_message" 
+        	android:dialogTitle="@string/about" >
+		</com.kivvi.ripples.livewallpapersettings.MyDialogPreference>
+	</PreferenceCategory>
+		
+</PreferenceScreen>

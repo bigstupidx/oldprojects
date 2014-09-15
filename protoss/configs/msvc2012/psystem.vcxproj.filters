@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="debug">
+      <UniqueIdentifier>{f4bacfb6-dc29-4866-a870-46d43e9fb867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{3c542dcd-130e-439d-818c-d13608f6a36c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wrapper">
+      <UniqueIdentifier>{30e72862-c878-4a31-b50e-800646175b05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wrapper\win32">
+      <UniqueIdentifier>{271152b5-c38d-49d5-9f82-fe9e589c806a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opengl">
+      <UniqueIdentifier>{c55fc20d-9c60-4dd2-9664-08337b9efe6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="opengl\es20">
+      <UniqueIdentifier>{ade643d6-8e87-4520-8301-af6545965d7d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\system\debug\passert.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\debug\plog.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\wrapper\win32\pwin32crt.cpp">
+      <Filter>wrapper\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\wrapper\win32\pwin32debugutility.cpp">
+      <Filter>wrapper\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\wrapper\win32\pwin32time.cpp">
+      <Filter>wrapper\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\opengl\es20\pglerror_es20.cpp">
+      <Filter>opengl\es20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\opengl\es20\pglframebuffer_es20.cpp">
+      <Filter>opengl\es20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\opengl\es20\pglshader_es20.cpp">
+      <Filter>opengl\es20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\opengl\es20\pglstate_es20.cpp">
+      <Filter>opengl\es20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\opengl\es20\pgltexture_es20.cpp">
+      <Filter>opengl\es20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\system\opengl\es20\pglvertexbuffer_es20.cpp">
+      <Filter>opengl\es20</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\system\debug\passert.h">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\debug\plog.h">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\memory\pnew.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\wrapper\pcrt.h">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\wrapper\pdebugutility.h">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\wrapper\ptime.h">
+      <Filter>wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\opengl\pglerror.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\opengl\pglframebuffer.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\opengl\pglshader.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\opengl\pglstate.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\opengl\pgltexture.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\system\opengl\pglvertexbuffer.h">
+      <Filter>opengl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

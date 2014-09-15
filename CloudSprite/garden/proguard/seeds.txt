@@ -1,0 +1,27 @@
+com.cooee.wallpaper.framework.GLWallpaperService
+com.cooee.wallpaper.framework.GLWallpaperService: GLWallpaperService()
+com.cooee.wallpaper.framework.OpenGLES2WallpaperService
+com.cooee.wallpaper.framework.OpenGLES2WallpaperService: OpenGLES2WallpaperService()
+com.cooee.wallpaper.lotus.MainActivity
+com.cooee.wallpaper.lotus.MainActivity: MainActivity()
+com.cooee.wallpaper.lotus.R$drawable: int drip
+com.cooee.wallpaper.lotus.R$drawable: int hudie
+com.cooee.wallpaper.lotus.R$drawable: int hudie_d_1
+com.cooee.wallpaper.lotus.R$drawable: int hudie_d_2
+com.cooee.wallpaper.lotus.R$drawable: int icon
+com.cooee.wallpaper.lotus.R$drawable: int leaf
+com.cooee.wallpaper.lotus.R$drawable: int lotus
+com.cooee.wallpaper.lotus.R$drawable: int lotus_bg_d_0
+com.cooee.wallpaper.lotus.R$drawable: int lotus_floor_d_0
+com.cooee.wallpaper.lotus.R$drawable: int lotus_light
+com.cooee.wallpaper.lotus.R$drawable: int lotus_water
+com.cooee.wallpaper.lotus.R$drawable: int number
+com.cooee.wallpaper.lotus.R$raw: int fragmentshader
+com.cooee.wallpaper.lotus.R$raw: int vertexshader
+com.cooee.wallpaper.lotus.R$string: int app_name
+com.cooee.wallpaper.lotus.R$string: int author
+com.cooee.wallpaper.lotus.R$string: int description
+com.cooee.wallpaper.lotus.R$string: int service_name
+com.cooee.wallpaper.lotus.R$xml: int wallpaper
+com.cooee.wallpaper.lotus.WallpaperService
+com.cooee.wallpaper.lotus.WallpaperService: WallpaperService()

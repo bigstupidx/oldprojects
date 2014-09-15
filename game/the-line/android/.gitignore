@@ -1,0 +1,11 @@
+## Channels
+channel.properties
+src/com/kivvi/theline/android/channel/Channel.java
+src/com/kivvi/theline/android/channel/anzhi/AnzhiAds.java
+src/com/kivvi/theline/android/channel/anzhi/AnzhiChannel.java
+src/com/kivvi/theline/android/channel/googleplay/GoogleAds.java
+src/com/kivvi/theline/android/channel/googleplay/GooglePlayChannel.java
+src/com/kivvi/theline/android/channel/munion360/Munion360Ads.java
+src/com/kivvi/theline/android/channel/munion360/Munion360Channel.java
+src/com/kivvi/theline/android/channel/munion360admob/GoogleAds.java
+src/com/kivvi/theline/android/channel/munion360admob/Munion360AdmobChannel.java

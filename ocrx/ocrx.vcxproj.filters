@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ocrx\ocrx.cpp">
+      <Filter>ocrx</Filter>
+    </ClCompile>
+    <ClCompile Include="qqlinker\qqlinkerdlg.cpp">
+      <Filter>qqlinker</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx\StdAfx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="ocrx\ocrxdlg.cpp">
+      <Filter>ocrx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ocrx\ocrx.h">
+      <Filter>ocrx</Filter>
+    </ClInclude>
+    <ClInclude Include="qqlinker\qqlinkerdlg.h">
+      <Filter>qqlinker</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx\StdAfx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\Resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ocrx\ocrxdlg.h">
+      <Filter>ocrx</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ocrx">
+      <UniqueIdentifier>{939491ea-78ee-4472-99ec-b6fc4f36b1f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qqlinker">
+      <UniqueIdentifier>{cc1c0f51-8c1c-4557-adab-7029b5fb8269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{2f57cfcd-9945-408f-9d5f-f1093940edea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{2c27036a-c20a-42c8-9e03-fa8437ca3245}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource\ocrx.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\res\ocrx.ico" />
+  </ItemGroup>
+</Project>

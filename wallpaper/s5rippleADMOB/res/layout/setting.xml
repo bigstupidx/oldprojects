@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/setting_head"
+        android:text="@string/app_name"
+        android:textSize="17.5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/setting_bottom"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+                <TextView 
+                    android:id="@+id/tvCustomWallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/preferences_customWallpaper"
+                    android:textColor="#909399"
+                    android:textSize="14dp"/>
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#505155"/>
+                <TextView 
+                    android:id="@+id/tvSysWallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/preferences_sysWallpaper"
+                    android:textColor="#909399"
+                    android:textSize="14dp"/>
+                <View 
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="#505155"/>
+                <TextView 
+                    android:id="@+id/tvDefWallpaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/preferences_defWallpaper"
+                    android:textColor="#909399"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/setting_bottom"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preferences_frequency"
+                    android:textColor="#909399"
+                    android:textSize="14dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgFrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/preferences_frequency"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbClose"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/close"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFast"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/fase"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbNormal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/normal"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSlow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/slow"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/setting_bottom"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preferences_range"
+                    android:textColor="#909399"
+                    android:textSize="14dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgRipplesSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/preferences_range"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rbRipplesBig"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/big"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbRipplesNormal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/normal"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbRipplesSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio"
+                        android:text="@string/small"
+                        android:textColor="#909399"
+                        android:textSize="14dp" />
+                </RadioGroup>
+            </LinearLayout>
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+        
+</LinearLayout>
