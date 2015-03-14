@@ -1,0 +1,207 @@
+1.访问链接： http://sgmels.wizlong.com:10032/api/game/games.jsp
+
+2.访问方式：使用get传参的方式
+
+3.返回方式：使用统一的 json 进行数据返回
+
+4.接口说明：
+
+0.获取当前进入游戏的用户id信息：http://sgmelscourse.cnttt.com:10030/sgmkj/online/00000533/index.html?gspid=xxxxx
+
+   输入参数：N/A
+
+   返回参数：string gspid=当前登录用户的编号；
+   
+   示例：userName = getURLParameter("gspid")；
+
+1.获取用户： http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getUser&userName=xxx
+
+   输入参数：action=getUser；userName=登录用户名
+
+   返回参数：useName=用户名；name=姓名；（暂定）
+   
+   示例：jsonResult({"name":"徐嵘","userName":"xurong", "zone":"别克江苏区域销售中心"})
+
+2.获取游戏： http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getGame&gameId=xxx
+
+    输入参数：action=getGame；gameId=主键id
+
+    返回参数：gameId=主键id；name=名字；version=版本
+    
+    示例：jsonResult({"gameId":"12","name":"记忆卡牌"})
+
+3.获取用户的游戏最高分数：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getScore&userName=xxx&gameId=xxx
+
+   输入参数：action=getScore；userName=登录用户名；gameId=主键id
+
+   返回参数：score=分值
+   
+   示例：jsonResult({"score":"20000"})，如果当前用户未进行过该游戏，则最高分为0；
+
+4.（暂定）获取用户全国排名：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getNationPlaces&userName=xxx&gameId=xxx
+
+    输入参数：action= getNationPlaces；userName=登录用户名；gameId=主键id
+
+    返回参数：places＝全国排名；all=全国排名前50（显示字段：排名、经销商中文名、用户名、分数）
+    
+    示例：jsonResult({"places":"12",
+           "all": [
+           {"places":"1" , "dealer":"网络发展和管理", "userName":"ABC", "score":"20000"},
+           {"places":"2" , "dealer":"网络发展和管理2", "userName":"ABC", "score":"19000"},
+           {"places":"3" , "dealer":"网络发展和管理3", "userName":"ABC", "score":"18000"},
+           .............................................................................
+           {"places":"50" , "dealer":"网络发展和管理50", "userName":"ABC", "score":"2000"}
+           ]
+          })
+
+5.（暂定）获取用户地区排名：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getZonePlaces&userName=xxx&gameId=xxx
+
+    输入参数：action= getZonePlaces；userName=登录用户名；gameId=主键id
+
+    返回参数：places＝地区排名；all=区域排名前50（显示字段：排名、经销商中文名、用户名、分数）
+    
+    示例：jsonResult({"places":"7",
+           "all": [
+           {"places":"1" , "dealer":"网络发展和管理", "userName":"ABC", "score":"20000"},
+           {"places":"2" , "dealer":"网络发展和管理2", "userName":"ABC", "score":"19000"},
+           {"places":"3" , "dealer":"网络发展和管理3", "userName":"ABC", "score":"18000"},
+           .............................................................................
+           {"places":"50" , "dealer":"网络发展和管理50", "userName":"ABC", "score":"2000"}
+           ]
+          })
+    
+5.1.（暂定）获取用户经销商（展厅）内排名：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getUserGroupPlaces&userName=xxx&gameId=xxx
+
+    输入参数：action= getUserGroupPlaces；userName=登录用户名；gameId=主键id
+
+    返回参数：places＝用户经销商（展厅）内排名；all=内部排名前50（显示字段：排名、经销商中文名、用户名、分数）
+    
+    示例：jsonResult({"places":"1",
+           "all": [
+           {"places":"1" , "dealer":"网络发展和管理", "userName":"ABC", "score":"20000"},
+           {"places":"2" , "dealer":"网络发展和管理2", "userName":"ABC", "score":"19000"},
+           {"places":"3" , "dealer":"网络发展和管理3", "userName":"ABC", "score":"18000"},
+           .............................................................................
+           {"places":"50" , "dealer":"网络发展和管理50", "userName":"ABC", "score":"2000"}
+           ]
+          })
+
+6.（暂定）获取经销商全国排名：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getGroupPlaces&userName=xxx&gameId=xxx
+
+    输入参数：action=getGroupPlaces；userName=登录用户名；gameId=主键id
+
+    返回参数：places=经销商排名；all=全国排名前50（显示字段：排名、经销商中文名、团队分数）
+    
+    示例：jsonResult({"places":"12",
+           "all": [
+           {"places":"1" , "dealer":"网络发展和管理", "score":"20000"},
+           {"places":"2" , "dealer":"网络发展和管理2","score":"19000"},
+           {"places":"3" , "dealer":"网络发展和管理3","score":"18000"},
+           .............................................................................
+           {"places":"50" , "dealer":"网络发展和管理50","score":"2000"}
+           ]
+          })
+
+6.1.（暂定）获取经销商区域排名：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getGroupZonePlaces&userName=xxx&gameId=xxx
+
+    输入参数：action=getGroupZonePlaces；userName=登录用户名；gameId=主键id
+
+    返回参数：places=经销商排名；all=区域排名前50（显示字段：排名、经销商中文名、团队分数）    
+    
+    示例：jsonResult({"places":"7",
+           "all": [
+           {"places":"1" , "dealer":"网络发展和管理", "score":"20000"},
+           {"places":"2" , "dealer":"网络发展和管理2","score":"19000"},
+           {"places":"3" , "dealer":"网络发展和管理3","score":"18000"},
+           .............................................................................
+           {"places":"50" , "dealer":"网络发展和管理50","score":"2000"}
+           ]
+          })
+
+7.获取游戏全部排名（50条记录）：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=getAllPlaces&userName=xxx&gameId=xxx
+
+   输入参数：action=getAllPlaces；userName=登录用户名；gameId=主键id
+
+   返回参数：unPlaces＝全国排名；unAll=全国排名前50；uzPlaces＝地区排名；uzAll=地区排名前50；ugPlaces＝经销商（展厅）内排名；ugAll=经销商（展厅）内排名前50；
+   	         显示字段：排名、经销商中文名、用户名、分数
+   	         
+             gnPlaces＝全国排名；gnAll=全国排名前50；gzPlaces＝地区排名；gzAll=地区排名前50
+             显示字段：排名、经销商中文名、经销商团队总人数、当前团队中最高分总计、团队分数
+   示例：jsonResult({"unPlaces":"12",
+           "unAll": [
+           {"places":"1" , "dealer":"网络发展和管理", "userName":"ABC", "name":"张三", "score":"20000", "zone":"别克江苏区域销售中心"},
+           {"places":"2" , "dealer":"网络发展和管理2", "userName":"ABC", "name":"张三", "score":"19000", "zone":"别克江苏区域销售中心"},
+           {"places":"3" , "dealer":"网络发展和管理3", "userName":"ABC", "name":"张三", "score":"18000", "zone":"别克江苏区域销售中心"},
+           .............................................................................
+           {"places":"20" , "dealer":"网络发展和管理50", "userName":"ABC", "name":"张三", "score":"2000", "zone":"别克江苏区域销售中心"}
+           ],
+           "uzPlaces":"7",
+           "uzAll": [
+           {"places":"1" , "dealer":"网络发展和管理", "userName":"ABC", "name":"张三", "score":"20000", "zone":"别克江苏区域销售中心"},
+           {"places":"2" , "dealer":"网络发展和管理2", "userName":"ABC", "name":"张三", "score":"19000", "zone":"别克江苏区域销售中心"},
+           {"places":"3" , "dealer":"网络发展和管理3", "userName":"ABC", "name":"张三", "score":"18000", "zone":"别克江苏区域销售中心"},
+           .............................................................................
+           {"places":"20" , "dealer":"网络发展和管理50", "userName":"ABC", "name":"张三", "score":"2000", "zone":"别克江苏区域销售中心"}
+           ],
+           "ugPlaces":"1",
+           "ugAll": [
+           {"places":"1" , "dealer":"网络发展和管理", "userName":"ABC", "name":"张三", "score":"20000", "zone":"别克江苏区域销售中心"},
+           {"places":"2" , "dealer":"网络发展和管理2", "userName":"ABC", "name":"张三", "score":"19000", "zone":"别克江苏区域销售中心"},
+           {"places":"3" , "dealer":"网络发展和管理3", "userName":"ABC", "name":"张三", "score":"18000", "zone":"别克江苏区域销售中心"},
+           .............................................................................
+           {"places":"20" , "dealer":"网络发展和管理50", "userName":"ABC", "name":"张三", "score":"2000", "zone":"别克江苏区域销售中心"}
+           ],
+           "gnPlaces":"12",
+           "gnAll": [
+           {"places":"1" , "dealer":"网络发展和管理", "score":"20000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"},
+           {"places":"2" , "dealer":"网络发展和管理2", "score":"19000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"},
+           {"places":"3" , "dealer":"网络发展和管理3", "score":"18000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"},
+           .............................................................................
+           {"places":"20" , "dealer":"网络发展和管理50", "score":"2000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"}
+           ],
+           "gzPlaces":"7",
+           "gzAll": [
+           {"places":"1" , "dealer":"网络发展和管理", "score":"20000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"},
+           {"places":"2" , "dealer":"网络发展和管理2", "score":"19000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"},
+           {"places":"3" , "dealer":"网络发展和管理3", "score":"18000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"},
+           .............................................................................
+           {"places":"20" , "dealer":"网络发展和管理50","score":"2000", "groupSize":"20", "groupSum":"200000", "zone":"别克江苏区域销售中心"}
+           ]
+          })  
+
+8.保存分值：http://sgmels.wizlong.com:10032/app/game/games.jsp?action=setScore&userName=xxx&gameId=xxx&score=xxx
+
+   输入参数：action=setScore；userName=用户名；gameId=主键Id；score=分值
+
+   返回参数：jsonResult({"result":"20000"})
+   
+####################################################################################################################
+####################################################################################################################
+###新增游戏接口 2014-01-24#################
+###为配合射击游戏，增加不同的关卡的游戏分数处理的接口##########################################
+####################################################################################################################
+####################################################################################################################
+9.获取全部(10)个关卡的最高分数以及最高关卡号
+
+  输入参数：action=getLevelScore；userName=登录用户名；gameId=游戏主键id；
+  返回参数：topLevel=最高已通关关卡号；scores=所有关卡分数
+  jsonResult(
+	{
+	   "topLevel":"3",
+	   "scores": [1000,800,1000,400,0,0,0,0,0,0] （总共10关分数，从1-10顺序排列，没有分数的关卡置为0）
+	})
+
+%%------------------------------------------------------------------------------------%%
+
+10.保存每一关的得分，同时记录是否过关
+	 
+	 输入参数：action=setLevelScore；userName=用户名；gameId=游戏主键Id；score=分值；levelNo=关卡号；isPass=是否过关（0：未过；1：过）
+
+%%------------------------------------------------------------------------------------%%
+
+
+
+   
+
+
+

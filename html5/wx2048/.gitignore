@@ -1,0 +1,22 @@
+## WebStorm
+.idea
+
+## cocos
+publish/
+runtime/
+tools/
+
+## frameworks
+/frameworks/cocos2d-html5/*
+/frameworks/js-bindings/
+/frameworks/runtime-src/
+
+## track CCBoot.js
+!/frameworks/cocos2d-html5/CCBoot.js
+
+## keep CCDirector.js
+!/frameworks/cocos2d-html5/cocos2d/
+/frameworks/cocos2d-html5/cocos2d/*
+!/frameworks/cocos2d-html5/cocos2d/core
+/frameworks/cocos2d-html5/cocos2d/core/*
+!/frameworks/cocos2d-html5/cocos2d/core/CCDirector.js

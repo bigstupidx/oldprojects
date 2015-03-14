@@ -1,0 +1,36 @@
+{
+    "project_type": "javascript",
+
+    "debugMode": 1,
+    "showFPS": false,
+    "frameRate": 60,
+    "id": "gameCanvas",
+    "renderMode": 1,
+    "engineDir": "frameworks/cocos2d-html5",
+
+    "modules": ["core", "actions", "labels", "menus", "audio", "ccui", "gui"],
+
+    "jsList": [
+        "src/config.js",
+        "src/application.js",
+        "src/resource.js",
+        "src/storage.js",
+        "src/firstscene.js",
+        "src/loadingscene.js",
+        "src/promptscene.js",
+        "src/selectorscene.js",
+        "src/selector.js",
+        "src/boss.js",
+        "src/levelscene.js",
+        "src/gamescene.js",
+        "src/options.js",
+        "src/questions.js",
+        "resources/java-tool/doc.js",
+        "src/resultscene.js",
+        "src/rankscene.js",
+        "weixin/WeixinApi.js",
+        "weixin/weixindata.js",
+        "src/decorate.js",
+        "src/user.js"
+    ]
+}

@@ -1,0 +1,1 @@
+java -jar pictoword.jar doc.txt

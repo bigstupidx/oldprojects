@@ -1,0 +1,28 @@
+{
+    "project_type": "javascript",
+
+    "debugMode": 0,
+    "showFPS": false,
+    "frameRate": 60,
+    "id": "gameCanvas",
+    "renderMode": 1,
+    "engineDir": "frameworks/cocos2d-html5",
+
+    "modules": ["core", "actions", "labels", "menus"],
+
+    "jsList": [
+        "src/firstscene.js",
+        "src/loadingscene.js",
+        "src/resource.js",
+        "src/wx2048scene.js",
+        "src/wx2048layer.js",
+        "src/grid.js",
+        "src/tile.js",
+        "src/config.js",
+        "src/gameover.js",
+        "src/share.js",
+        "src/guide.js",
+        "weixin/WeixinApi.js",
+        "weixin/weixindata.js"
+    ]
+}

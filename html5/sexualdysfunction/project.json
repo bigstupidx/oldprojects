@@ -1,0 +1,20 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 1,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["core", "actions", "labels", "menus", "audio", "ccui", "gui"],
+
+    "jsList" : [
+        "src/resource.js",
+        "src/firstscene.js",
+        "src/gamescene.js",
+        "src/decorate.js",
+        "src/options.js"
+    ]
+}
